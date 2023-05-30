@@ -1,0 +1,60 @@
+.containSelect{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* position: fixed; */
+    width: 100%;
+    background: rgb(255, 255, 255);
+    z-index: 1;
+    margin-top: 80px;
+    justify-content: center;
+    background-image: url("../../img/arbolazul.jpg");
+    background-size: cover;
+}
+
+.containSelectOption{
+    display: inline-block;
+    background: none;
+    margin: 8px;
+}
+
+.LabelSelectOption{
+
+    margin: 0; /* elimina el margen por defecto */
+  padding: 10px; /* elimina el padding por defecto */
+  border: none; /* elimina el borde por defecto */
+  color: inherit; /* establece el color igual al del elemento padre */
+  appearance: none;
+  background: none;
+
+  color: rgba(232, 231, 231, 0.8);
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+
+}
+
+.SelectOption{
+
+    margin: 5px 0 0 0; /* elimina el margen por defecto */
+  padding: 4px; /* elimina el padding por defecto */
+  top: 7px;
+  border: none; /* elimina el borde por defecto */
+  font-size: 15px; /* establece el tamaño de fuente igual al del elemento padre */
+  color: inherit; /* establece el color igual al del elemento padre */
+  appearance: none;
+  background: none;
+
+  color: rgba(255, 255, 255, 0.8);
+    font-family: monospace;
+    font-weight: 1000;
+
+    background: #5e00b6;
+    border-radius: 5px;
+}
+
+.SelectOption:hover{
+
+  cursor: pointer;
+}

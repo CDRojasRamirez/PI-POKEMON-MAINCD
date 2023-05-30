@@ -1,0 +1,30 @@
+.containNav {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 30px;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+.childNav {
+
+    color: white;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+
+.childNav:hover {
+
+    cursor: pointer;
+    color:rgb(255, 127, 127)
+}

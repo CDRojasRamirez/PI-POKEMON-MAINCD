@@ -1,0 +1,65 @@
+.CardGrid {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(19, 62, 142);
+    height: 350px;
+    width: 250px;
+    list-style: none;
+    border-radius: 10px;
+    border: 10px solid rgb(147, 11, 11);
+    box-shadow: 10px 0px 15px 5px rgb(0, 0, 0);
+    position: relative;
+    top: 50px;
+    background-color: rgba(100, 100, 100, 0.3);
+    background: rgb(255, 157, 0);
+    box-shadow: 10px 0px 15px 5px rgb(0, 0, 0);
+    background-image: url('../../img/mundoPoke.jpg');
+    background-size: cover;
+    color: aliceblue;
+    padding: 5px;
+    
+}
+
+.CardGrid:hover{
+
+    cursor: pointer;
+}
+
+.link {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.CardGrid h1 {
+
+    text-decoration: none;
+    font-size: 30px;
+    font-family: monospace;
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: aliceblue;
+    background: none;
+    box-shadow: 2px 2px 5px 7px rgb(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.image{
+    /* background-color: rgb(48, 48, 48); */
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    box-sizing: content-box;
+}
+
+.ContainPowers {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

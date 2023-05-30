@@ -1,0 +1,17 @@
+.PokemonsGrid{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+    margin: 0;
+    background-repeat: repeat;
+    background-image: url('../../img/mundoPoke.jpg');
+    background-attachment: fixed;
+    background-color: rgb(255, 141, 141);
+    
+  
+}
