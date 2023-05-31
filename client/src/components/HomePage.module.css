@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "Pokemon Solid";
+    src: url("../fonts/pokemon_solid/pokemonsolid.ttf");
+  }
+
+.paginado {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 400px;
+    /* background: rgb(35, 31, 0); */
+    background-image: url('../img/backgroundPokemon.jpg');
+    width: 100vw;
+    margin-top: 80px;
+}
+
+.paginado button {
+
+    color: white;
+    font-size: 35px;
+    font-family: monospace;
+    border: none;
+    padding: 5px;
+    width: 200px;
+    font-family: "Pokemon Solid";
+    background: transparent;
+    letter-spacing: 5px;
+}
+
+.paginado button:hover {
+
+    cursor: pointer;
+    color: rgb(255, 238, 0);
+}
+
+.paginado label {
+
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: "Pokemon Solid";
+    width: 20px;
+}

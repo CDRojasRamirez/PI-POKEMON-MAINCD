@@ -1,4 +1,4 @@
-import { GET_ALL_POKEMONS, NEXT, BACK } from "./action-type";
+import { GET_ALL_POKEMONS, NEXT, BACK, ORDER_AD, ORDER_TYPE, ORDER_APIDB, RESET } from "./action-type";
 import axios from "axios";
 
 export const getAllPokemons = () => {
@@ -20,4 +20,21 @@ export const next = () => {
 export const back = () => {
 
   return { type: BACK }
+}
+
+export const orderAD = (AscDesc) => {
+
+  return { type: ORDER_AD, payload: AscDesc}
+}
+export const orderType = (typePokemon) => {
+
+  return { type: ORDER_TYPE, payload: typePokemon }
+}
+export const orderApiDb = (ApiDb) => {
+
+  return { type: ORDER_APIDB, payload: ApiDb}
+}
+export const reset = () => {
+
+  return { type: RESET}
 }

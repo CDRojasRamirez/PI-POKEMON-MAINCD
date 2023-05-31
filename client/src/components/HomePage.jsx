@@ -3,9 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import Select from "../utils/Select/Select";
 import Pokemons from "./Pokemons/Pokemons";
 import { back, next } from "../redux/action";
+import style from './HomePage.module.css'
 
 
-const HomePage = ({AllPokemons}) => {
+const HomePage = ({AllPokemons, PokemonsFiltereds}) => {
 
   const dispatch = useDispatch()
   const { currentPage } = useSelector(state => state)
@@ -23,12 +24,14 @@ const HomePage = ({AllPokemons}) => {
   
   return (
     <div className="home-page">
-      {console.log(AllPokemons)}
+      
+      <div className={style.paginado}>
+        <button onClick={handleBack}>⪻ Back</button>
+        <label htmlFor="">{currentPage} </label>
+        <button onClick={handleNext}>Next ⪼</button>
+      </div>
       <Select />
-      <button onClick={handleBack}>Back</button>
-      <label htmlFor="">Page: {currentPage} </label>
-      <button onClick={handleNext}>Next</button>
-      <Pokemons AllPokemons={AllPokemons}/>
+      <Pokemons AllPokemons={AllPokemons} PokemonsFiltereds={PokemonsFiltereds}/>
     </div>
   );
 };

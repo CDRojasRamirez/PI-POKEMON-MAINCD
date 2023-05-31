@@ -16,14 +16,14 @@ function App() {
   useEffect(() => {
     dispatch(getAllPokemons())
   }, [dispatch])  
-  const { AllPokemons } = useSelector(state => state)
+  const { AllPokemons, PokemonsFiltereds } = useSelector(state => state)
 
   return (
     <div className="App">
       <Nav />
       <Switch>
         <Route exact path='/' ><LandingPage /></Route>
-        <Route path='/home' ><ErrorBoundary><HomePage AllPokemons={AllPokemons}/></ErrorBoundary></Route>
+        <Route path='/home' ><ErrorBoundary><HomePage AllPokemons={AllPokemons} PokemonsFiltereds={PokemonsFiltereds}/></ErrorBoundary></Route>
         <Route path='/detail/:id' ><ErrorBoundary><DetailPage /></ErrorBoundary></Route>
       </Switch>
     </div>

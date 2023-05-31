@@ -1,7 +1,7 @@
 
 import style from './Select.module.css'
 import { useDispatch } from "react-redux"
-import { filtrarDestino, reset, filtrarGenre, filtrarOrder } from '../../redux/action';
+import {reset, orderType, orderAD, orderApiDb } from '../../redux/action';
 
 
 const Select = () => {
@@ -10,37 +10,36 @@ const Select = () => {
 
   const handleDestino = (e) => {
 
-      // e.preventDefault()
-      // const { value } = e.target
-      // return dispatch(filtrarDestino(value))
+      e.preventDefault()
+      const { value } = e.target
+      return dispatch(orderApiDb(value))
 
   }
 
-  const handleGenreFilter = (e) => {
-      // e.preventDefault()
-      // return dispatch(filtrarGenre(e.target.value))
+  const handleTypeFilter = (e) => {
+        e.preventDefault()
+      return dispatch(orderType(e.target.value))
   }
 
   const handleOrderFilter = (e) => {
 
-    // e.preventDefault()
-    // return dispatch(filtrarOrder(e.target.value))
+        e.preventDefault()
+      return dispatch(orderAD(e.target.value))
   }
   
   const handleReset = () => {
 
-      // return dispatch(reset())
+      return dispatch(reset())
   }
   
     return (
         <div className={style.containSelect}>
             
             <div className={style.containSelectOption}>
-              {/* <label htmlFor="genre-filter" className={style.LabelSelectOption}>Ordenar por: </label> */}
               <select
                 id="genre-filter"
                 //   value={genreFilter}
-                onChange={handleGenreFilter}
+                onChange={handleTypeFilter}
                 className={style.SelectOption}
               >
                 <option value="" className={style.SelectOption}>Types</option>
@@ -76,7 +75,6 @@ const Select = () => {
                 onChange={handleOrderFilter}
                 className={style.SelectOption}
               >
-                <option value="" className={style.SelectOption}>Orden</option>
                 <option value="asc" className={style.SelectOption}>Ascendente</option>
                 <option value="desc" className={style.SelectOption}>Descendente</option>
               </select>
@@ -93,8 +91,7 @@ const Select = () => {
                 onChange={ handleDestino }
                 defaultValue={"DEFAULT"}
               >
-                <option className={style.SelectOption} value="DEFAULT" disabled>Destino</option>
-                {/* <option value="ambos" className={style.SelectOption}>Ambos</option> */}
+                <option className={style.SelectOption} value="DEFAULT">Destino</option>
                 <option value="db" className={style.SelectOption}>DB</option>
                 <option value="api"  className={style.SelectOption}>API</option>
               </select>

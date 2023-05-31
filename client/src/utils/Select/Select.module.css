@@ -4,13 +4,11 @@
     flex-direction: row;
     align-items: center;
     /* position: fixed; */
-    width: 100%;
+    width: 100vw;
     background: rgb(255, 255, 255);
     z-index: 1;
-    margin-top: 80px;
     justify-content: center;
-    background-image: url("../../img/greenBack.jpg");
-    background-size: cover;
+    background: rgb(255, 217, 0);
 }
 
 .containSelectOption{
@@ -46,12 +44,12 @@
   appearance: none;
   background: none;
 
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.8);
     font-family: monospace;
     font-weight: 1000;
     
   
-    background: #04ff00;
+    background: #ff0000;
     box-shadow: 2px 2px 3px 3px rgb(0, 0, 0, .6);
     border-radius: 5px;
 }
