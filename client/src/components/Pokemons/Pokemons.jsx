@@ -3,7 +3,11 @@ import style from './Pokemons.module.css'
 import ErrorBoundary from "../../ErrorBoundary";
 
 const Pokemons = ({ AllPokemons }) => {
+
+ 
+
     return (
+      <>
       <ul className={style.PokemonsGrid}>
           { AllPokemons && AllPokemons?.map(e => {
 
@@ -25,7 +29,9 @@ const Pokemons = ({ AllPokemons }) => {
           </ErrorBoundary>
           }) }
       </ul>
+      </>
     );
+
   };
   
   export default Pokemons;

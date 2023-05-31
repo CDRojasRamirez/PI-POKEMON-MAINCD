@@ -1,4 +1,4 @@
-import { GET_ALL_POKEMONS } from "./action-type";
+import { GET_ALL_POKEMONS, NEXT, BACK } from "./action-type";
 import axios from "axios";
 
 export const getAllPokemons = () => {
@@ -12,3 +12,12 @@ export const getAllPokemons = () => {
     }
   };
 };
+
+export const next = () => {
+
+  return { type: NEXT }
+}
+export const back = () => {
+
+  return { type: BACK }
+}

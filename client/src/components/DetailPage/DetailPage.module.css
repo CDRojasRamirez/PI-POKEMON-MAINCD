@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Pokemon Solid";
+    src: url("../../fonts/pokemon_solid/pokemonsolid.ttf");
+  }
 
 .DetailGrid {
     display: flex;
@@ -38,10 +42,10 @@ position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(100, 100, 100, 0.3);
+    background-color: rgb(255, 72, 0);
     border-radius: 0px 100px 100px 0px;
     background: rgb(255, 157, 0);
-    height: 500px;
+    height: 550px;
     width: 400px;
     margin: 0;
     margin-left: 10px;
@@ -60,13 +64,16 @@ position: relative;
 
 .Detail h1 {
     text-decoration: none;
-    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
     font-family: monospace;
+    font-family: "Pokemon solid";
+    letter-spacing: 5px;
     text-transform: uppercase;
-    margin-top: 20px;
     color: aliceblue;
     background: none;
-    box-shadow: 2px 2px 5px 7px rgb(0, 0, 0, 0.2);
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
 }
 
 .Detail p {

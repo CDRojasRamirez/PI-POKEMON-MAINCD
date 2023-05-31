@@ -36,7 +36,7 @@ const Select = () => {
         <div className={style.containSelect}>
             
             <div className={style.containSelectOption}>
-              <label htmlFor="genre-filter" className={style.LabelSelectOption}>Ordenar por: </label>
+              {/* <label htmlFor="genre-filter" className={style.LabelSelectOption}>Ordenar por: </label> */}
               <select
                 id="genre-filter"
                 //   value={genreFilter}

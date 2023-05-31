@@ -9,7 +9,7 @@
     z-index: 1;
     margin-top: 80px;
     justify-content: center;
-    background-image: url("../../img/arbolazul.jpg");
+    background-image: url("../../img/greenBack.jpg");
     background-size: cover;
 }
 
@@ -46,11 +46,13 @@
   appearance: none;
   background: none;
 
-  color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     font-family: monospace;
     font-weight: 1000;
-
-    background: #5e00b6;
+    
+  
+    background: #04ff00;
+    box-shadow: 2px 2px 3px 3px rgb(0, 0, 0, .6);
     border-radius: 5px;
 }
 
