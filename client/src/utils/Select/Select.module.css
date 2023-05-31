@@ -8,7 +8,10 @@
     background: rgb(255, 255, 255);
     z-index: 1;
     justify-content: center;
-    background: rgb(255, 217, 0);
+    background: rgb(127, 0, 40);
+    background-image: url('../../img/fire2Back.jpg');
+    background-image: url('../../img/backgroundPokemon.jpg');
+    
 }
 
 .containSelectOption{
@@ -25,7 +28,7 @@
   color: inherit; /* establece el color igual al del elemento padre */
   appearance: none;
   background: none;
-
+  
   color: rgba(232, 231, 231, 0.8);
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
@@ -43,18 +46,19 @@
   color: inherit; /* establece el color igual al del elemento padre */
   appearance: none;
   background: none;
+  width: 100px;
 
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     font-family: monospace;
     font-weight: 1000;
-    
-  
-    background: #ff0000;
-    box-shadow: 2px 2px 3px 3px rgb(0, 0, 0, .6);
-    border-radius: 5px;
+    background: #73ff00;
+    box-shadow: 2px 2px 3px 2px rgb(0, 0, 0);
+    border-radius: 3px;
 }
 
 .SelectOption:hover{
 
   cursor: pointer;
+  background: #ff0040;
+  color: aliceblue;
 }

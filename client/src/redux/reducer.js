@@ -1,4 +1,3 @@
-import { reset } from "./action";
 import { GET_ALL_POKEMONS, BACK, NEXT, ORDER_AD, ORDER_TYPE, ORDER_APIDB, RESET } from "./action-type"
 
 
@@ -7,7 +6,7 @@ const initialState = {
     AllPokemons: [], //pokemons por pagina
     PokemonsFiltereds: [],
     currentPage: 1,
-    pokemonsPerPage: 12
+    pokemonsPerPage: 10
 };
 // Función auxiliar para paginar los Pokémones
 const paginatePokemons = (pokemons, currentPage, pokemonsPerPage) => {
@@ -39,6 +38,7 @@ export const reducer = (state = initialState, action) => {
                 const paginatedPokemons = paginatePokemons(state.Poke120, prevPage, state.pokemonsPerPage);
                 return {
                     ...state,
+                    PokemonsFiltereds: [],
                     currentPage: prevPage,
                     AllPokemons: paginatedPokemons
                 };
@@ -49,12 +49,13 @@ export const reducer = (state = initialState, action) => {
         
             case NEXT:
                 
-                if (state.currentPage < 10) {
+                if (state.currentPage < 12) {
                     try {
                         const nextPage = state.currentPage + 1;
                         const paginatedPokemons = paginatePokemons(state.Poke120, nextPage, state.pokemonsPerPage);
                         return {
                             ...state,
+                            PokemonsFiltereds: [],
                             currentPage: nextPage,
                             AllPokemons: paginatedPokemons
                         }
@@ -109,7 +110,8 @@ export const reducer = (state = initialState, action) => {
                 case RESET: 
                 return {
                     ...state,
-                    PokemonsFiltereds: []
+                    PokemonsFiltereds: [],
+                    PokemonsFiltereds: state.AllPokemons.sort((a,b) => a.id - b.id)
 
                 }
             

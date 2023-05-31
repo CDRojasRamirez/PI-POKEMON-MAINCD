@@ -9,17 +9,20 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 400px;
-    /* background: rgb(35, 31, 0); */
+    background-image: url('../img/backgroundPokemon.jpg');
+    background-image: url('../img/greenBack.jpg');
+    background: rgb(0, 0, 0);
     background-image: url('../img/backgroundPokemon.jpg');
     width: 100vw;
     margin-top: 80px;
+    gap: 80px;
+    
 }
 
 .paginado button {
 
-    color: white;
-    font-size: 35px;
+    color: rgb(140, 255, 0);
+    font-size: 30px;
     font-family: monospace;
     border: none;
     padding: 5px;
@@ -27,19 +30,48 @@
     font-family: "Pokemon Solid";
     background: transparent;
     letter-spacing: 5px;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0, .6);
+
+    /* overflow: hidden; */
+    /* object-fit: cover;  */
+    /* z-index: 0; */
 }
 
 .paginado button:hover {
 
     cursor: pointer;
-    color: rgb(255, 238, 0);
+    color: rgb(255, 242, 120);
+    
+    box-sizing: border-box;
+    transform: scale(1.2);
 }
 
-.paginado label {
+.containLabels {
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+
+.labelPrin {
     color: white;
-    font-size: 30px;
+    margin: 0;
+    font-size: 20px;
     font-weight: 800;
     font-family: "Pokemon Solid";
-    width: 20px;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0, .6);
+    letter-spacing: 5px;
+}
+
+.labelSecu {
+
+    color: rgb(206, 206, 206);
+    font-size: 25px;
+    font-weight: 800;
+    font-family: monospace;
+    text-align: center;
+    width: 200px;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0, .6);
+    transition: step-start 0.5s ease-in-out;
 }
