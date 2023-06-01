@@ -1,12 +1,17 @@
 
 import style from './Select.module.css'
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import {reset, orderType, orderAD, orderApiDb } from '../../redux/action';
+import { useState } from 'react';
 
 
 const Select = () => {
 
+  const [selectedType, setSelectedType] = useState("Types")
+
+
   const dispatch = useDispatch()
+  const { PokemonsFiltereds } = useSelector(state => state)
 
   const handleDestino = (e) => {
 
@@ -18,14 +23,21 @@ const Select = () => {
 
   const handleTypeFilter = (e) => {
         e.preventDefault()
+        setSelectedType(e.target.value)
+        if(PokemonsFiltereds.length === 0){
+          setSelectedType("Types")
+        }
       return dispatch(orderType(e.target.value))
   }
 
   const handleOrderFilter = (e) => {
 
         e.preventDefault()
+        setSelectedType("Types")
+        
       return dispatch(orderAD(e.target.value))
   }
+  console.log(selectedType)
   
   const handleReset = () => {
 
@@ -38,11 +50,11 @@ const Select = () => {
             <div className={style.containSelectOption}>
               <select
                 id="genre-filter"
-                //   value={genreFilter}
+                value={selectedType}
                 onChange={handleTypeFilter}
                 className={style.SelectOption}
               >
-                <option value="" className={style.SelectOption}>Types</option>
+                <option value={selectedType} className={style.SelectOption} selected={selectedType === 'types'}>{selectedType}</option>
                 <option value="normal" className={style.SelectOption}>Normal</option>
                 <option value="rock" className={style.SelectOption}>Rock</option>
                 <option value="fire" className={style.SelectOption}>Fire</option>

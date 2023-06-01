@@ -91,60 +91,32 @@ const getByIdC = async (idPokemon) => {
 
 const getByNameC = async (name) => {
     try {
-        if (name) {
+        
           const pokeByName = await axios.get(
             `https://pokeapi.co/api/v2/pokemon/${name}`
           );
-          if (pokeByName) {
-            return {
-              id: pokeByName.data.id,
-              name: pokeByName.data.name,
-              hp: pokeByName.data.stats[0].base_stat,
-              attack: pokeByName.data.stats[1].base_stat,
-              defense: pokeByName.data.stats[2].base_stat,
-              speed: pokeByName.data.stats[5].base_stat,
-              height: pokeByName.data.height,
-              weight: pokeByName.data.weight,
-              image:
-                pokeByName.data.sprites.versions["generation-v"]["black-white"]
-                  .front_default,
-              types: pokeByName.data.types.map((e) => {
-                return { name: e.type.name };
-              }),
-            };
-          } else {
-            return [];
+          if(typeof pokeByName.data.stats[0].base_stat === "undefined"){
+            return []
           }
-        } else {
-          const pokemonsApi = await axios.get(
-            "https://pokeapi.co/api/v2/pokemon?limit=45"
-          );
-          const subRequest = pokemonsApi.data.results.map((e) => axios.get(e.url));
-          let promiseRequest = await Promise.all(subRequest);
-         
-        //   console.log(promiseRequest);
-    
-          promiseRequest = await promiseRequest.map((e) => {
+          else{
             return {
-              id: e.data.id,
-              name: e.data.name,
-              hp: e.data.stats[0].base_stat,
-              attack: e.data.stats[1].base_stat,
-              defense: e.data.stats[2].base_stat,
-              speed: e.data.stats[5].base_stat,
-              height: e.data.height,
-              weight: e.data.weight,
+              id: pokeByName?.data?.id,
+              name: pokeByName?.data?.name,
+              hp: pokeByName.data.stats[0].base_stat,
+              attack: pokeByName?.data?.stats[1]?.base_stat,
+              defense: pokeByName?.data?.stats[2]?.base_stat,
+              speed: pokeByName?.data?.stats[5]?.base_stat,
+              height: pokeByName?.data?.height,
+              weight: pokeByName?.data?.weight,
               image:
-                e.data.sprites.versions["generation-v"]["black-white"]
+                pokeByName?.data?.sprites.versions["generation-v"]["black-white"]
                   .front_default,
-              createInDb: "false",
-              types: e.data.types.map((e) => {
+              types: pokeByName?.data?.types?.map((e) => {
                 return { name: e.type.name };
               }),
             };
-          });
-          return promiseRequest;//retorna el array de pokemons de la api
-        }
+          }
+       
       } catch (error) {
         console.log(error);
       }

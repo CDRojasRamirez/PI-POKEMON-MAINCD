@@ -23,7 +23,7 @@ const PokemonsCard = ({ id, name, image, types }) => {
             </p>
           </li>
         ) : types[0].name === "fighting" ? (
-          <li className={style.CardGrid} style={{ border: "5px solid rgb(5, 96, 85, .5)", backgroundImage: `url(${require('../../img/fightPack.jpg').default})`}}>
+          <li className={style.CardGrid} style={{border: "5px solid rgb(5, 96, 85, .5)", backgroundImage: `url(${require('../../img/fightPack.jpg').default})`}}>
             <h1>{name}</h1>
             <img src={image} alt={name} className={style.image} />
             <p>

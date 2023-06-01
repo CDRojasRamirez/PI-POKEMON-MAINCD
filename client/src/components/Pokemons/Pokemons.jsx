@@ -29,7 +29,7 @@ const Pokemons = ({ AllPokemons, PokemonsFiltereds }) => {
           />
             </ErrorBoundary>
             })
-          : AllPokemons?.map(e => {
+          : PokemonsFiltereds.length === 0 ? AllPokemons?.map(e => {
 
           return <ErrorBoundary>
             <PokemonsCard
@@ -47,7 +47,25 @@ const Pokemons = ({ AllPokemons, PokemonsFiltereds }) => {
 
         />
           </ErrorBoundary>
-          }) }
+          }) : AllPokemons?.map(e => {
+
+            return <ErrorBoundary>
+              <PokemonsCard
+          key={e?.id}
+          id={e?.id}
+          name={e?.name}
+          image={e?.image}
+          hp={e?.hp}
+          attack={e?.attack}
+          defense={e?.defense}
+          speed={e?.speed}
+          height={e?.height}
+          weight={e?.weight}
+          types={e?.types}
+  
+          />
+            </ErrorBoundary>
+            })}
       </ul>
       </>
     );

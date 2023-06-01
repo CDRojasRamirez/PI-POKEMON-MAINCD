@@ -33,7 +33,7 @@ const getByNameH = async (req, res) => {
     try {
         const { name } = req.query;
          const apiPokemonsByName = await getByNameC(name)
-         res.status(200).json(apiPokemonsByName)
+          res.status(200).json(apiPokemonsByName)
 
         } catch (error) {
         res.status(404).json({error: error.message})
@@ -66,8 +66,8 @@ const postPokemonH = async (req, res) => {
             name: types,
           },
         });
-        const PokemonCreated = await newPokemon.addTypes(pokemonType);
-        res.status(200).json(PokemonCreated)//esto hace falta? , no me hizo falta pero en un momento me salio  , no creo pokemon porque no quiero xD
+        const PokemonCreatedTypes = await newPokemon.addTypes(pokemonType);
+        res.status(200).json(newPokemon)//esto hace falta? , no me hizo falta pero en un momento me salio  , no creo pokemon porque no quiero xD
         //.json(newPokemon); // esto no hace falta por eso lo comento 
   
         // await newPokemon.setTypes(pokemonType);

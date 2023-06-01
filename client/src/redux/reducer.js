@@ -1,4 +1,4 @@
-import { GET_ALL_POKEMONS, BACK, NEXT, ORDER_AD, ORDER_TYPE, ORDER_APIDB, RESET } from "./action-type"
+import { GET_ALL_POKEMONS, BACK, NEXT, ORDER_AD, ORDER_TYPE, ORDER_APIDB, RESET, CREATE_POKEMON, SEARCH_BAR } from "./action-type"
 
 
 const initialState = {
@@ -6,7 +6,8 @@ const initialState = {
     AllPokemons: [], //pokemons por pagina
     PokemonsFiltereds: [],
     currentPage: 1,
-    pokemonsPerPage: 10
+    pokemonsPerPage: 10,
+    PokemonCreated: {}
 };
 // Función auxiliar para paginar los Pokémones
 const paginatePokemons = (pokemons, currentPage, pokemonsPerPage) => {
@@ -90,10 +91,20 @@ export const reducer = (state = initialState, action) => {
                 const filteredType = state.AllPokemons.filter(e => {
                     return e.types.some((i) => i.name === action.payload)
                 })
-                return {
-                    ...state,
-                    PokemonsFiltereds: filteredType
+                console.log(filteredType)
+                if(filteredType.length === 0) { 
+                    alert('Non-existent pokemon of this type')
+                    return {
+                        ...state,
+                        PokemonsFiltereds: filteredType
+                    }
+                }else{
+                    return {
+                        ...state,
+                        PokemonsFiltereds: filteredType
+                    }
                 }
+                
                 case ORDER_APIDB: 
 
                 const isDbSelected = action.payload === "db";
@@ -114,6 +125,28 @@ export const reducer = (state = initialState, action) => {
                     PokemonsFiltereds: state.AllPokemons.sort((a,b) => a.id - b.id)
 
                 }
+
+                /****************************************** CREATE POKEMON ***********************************************/
+
+                case CREATE_POKEMON: 
+                return {
+                    PokemonCreated: action.payload
+                }
+
+                /****************************************** SEARCH BAR ***********************************************/
+
+                case SEARCH_BAR: 
+                console.log(action.payload)
+                    if(action.payload){
+                        return {
+                            ...state,
+                            PokemonsFiltereds: action.payload
+                        }
+                    }else{
+                        alert("Pokemon not foun")
+                        return
+                    }
+                
             
         default: return {
             ...state
