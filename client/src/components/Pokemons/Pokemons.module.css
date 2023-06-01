@@ -3,6 +3,11 @@
     background-image: url('../../img/mundoPoke.jpg');
     background-attachment: fixed;
 } */
+.PokemonsContain {
+
+    display: flex;
+    flex-direction: row;
+}
 
 .PokemonsGrid{
 

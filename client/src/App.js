@@ -1,6 +1,6 @@
 import './App.css';
 import LandingPage from './components/LandingPage';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, useLocation } from 'react-router-dom'
 import HomePage from './components/HomePage';
 import ErrorBoundary from './ErrorBoundary';
 import Nav from './components/Nav/Nav';
@@ -13,6 +13,7 @@ import CreatePokemon from './components/CreatePokemon/CreatePokemon';
 function App() {
 
   const dispatch = useDispatch()
+  const location = useLocation()
   
   useEffect(() => {
     dispatch(getAllPokemons())
@@ -21,9 +22,8 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
+      { location.pathname === '/' ? <LandingPage /> : <Nav /> }
       <Switch>
-        <Route exact path='/' ><LandingPage /></Route>
         <Route path='/home' ><ErrorBoundary><HomePage AllPokemons={AllPokemons} PokemonsFiltereds={PokemonsFiltereds}/></ErrorBoundary></Route>
         <Route path='/detail/:id' ><ErrorBoundary><DetailPage /></ErrorBoundary></Route>
         <Route path='/create' ><CreatePokemon /></Route>

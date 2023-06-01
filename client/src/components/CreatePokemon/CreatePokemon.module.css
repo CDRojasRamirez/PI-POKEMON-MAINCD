@@ -1,9 +1,16 @@
+@font-face {
+    font-family: "Pokemon Solid";
+    src: url("../../fonts/pokemon_solid/pokemonsolid.ttf");
+  }
+
 .containCreate {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: aquamarine;
+    background-image: url('../../img/mundoPoke.jpg');
+    background: rgb(84, 12, 12);
+    background-size: cover;
     height: 100vh;
     width: 100vw;
     
@@ -13,13 +20,112 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgb(19, 101, 139);
-    width: 500px;
-    height: 500px;
+    /* background-image: url('../../img/mundoPoke.jpg');
+    background-size: cover; */
+    /* box-shadow: 10px 0px 15px 5px rgb(0, 0, 0); */
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.containCreate h1 {
+
+    font-family: 'Pokemon solid';
+    color: #f2ff00;
+    -webkit-text-stroke: 1px rgb(255, 0, 0);
+    text-shadow: 5px 5px 15px rgb(0, 0, 0);
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 5px;
+}
+
+.formCreate h3 {
+
+    font-family: 'Pokemon solid';
+    margin: 0;
+    padding: 0;
 }
 
 .inputCreate {
 
-    font-size: 20px;
+    font-size: 17px;
     font-family: monospace;
+    background: rgba(0, 0, 0, 0.51);
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 2px;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    border: 2px solid rgb(255, 153, 0);
+    
+}
+
+.inputCreate:active {
+    box-shadow: 2px 2px 15px #ffac07 inset;
+}
+.inputCreate::placeholder {
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+.SelectOption {
+
+    border: none;
+    padding: 10px;
+    width: 225px;
+    background: #ffc800;
+    font-family: monospace;
+    margin-top: 2px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.labelOption {
+
+    color: rgb(164, 164, 164);
+    background: #464646;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: monospace;
+    margin-top: 2px;
+    font-weight: 800;
+    width: 205px;
+}
+
+.btnCreate {
+
+    color: rgb(67, 67, 67);
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+    font-weight: 800;
+    height: 200px;
+    width: 120px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    background-size: cover;
+}
+
+.btnCreate:hover {
+    cursor: pointer;
+    background-color: #51ff00;
+    color: rgb(75, 75, 75);
+    border: 3px solid rgb(75, 75, 75);
+    border-radius: 5px;
+}
+
+.gifP {
+    position: absolute; 
+    height: 300px;
+    width: 250px;
+    right: 400px;
+    top: 400px;
+    background-image: url('../../gif/pikachuSaludando.gif');
 }

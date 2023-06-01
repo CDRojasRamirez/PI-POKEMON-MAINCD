@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 import { searchBar } from "../../redux/action";
 import { useDispatch, useSelector } from "react-redux";
 
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons'
+
 const Nav = () => {
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const audioRef = useRef(null); // Referencia al elemento de audio
@@ -64,28 +68,32 @@ const Nav = () => {
 
   return (
     <div className={style.containNav}>
-      <Link to='/'><div className={style.childNav}>Maestro Pokemon</div></Link>
+      <Link to='/' className={style.Link}><div className={style.childNavLogo}>Daniel's pokemon</div></Link>
       <div className={style.childNav}>
         <input
           type="text"
           name="pokemonsName"
           value={namePokemon}
           onChange={handleSearchBar}
-          placeholder="Enter a pokemons name"
+          placeholder="Enter a pokemon name"
           onKeyDown={handleKeyDown}
+          className={style.inputName}
         />
-        <button onClick={handleBtnSearch} disabled={isSearchButtonDisabled}>
-          Buscar
+        <button onClick={handleBtnSearch} disabled={isSearchButtonDisabled} className={style.inputBtn}>
+        <FontAwesomeIcon icon={faMagnifyingGlass} className={style.iconLupa}/>
         </button>
       </div>
-      <Link to='/home'><div className={style.childNav}>Home</div></Link>
-      <div className={style.childNav}>About</div>
-      <Link to='/create'><div className={style.childNav}>Create</div></Link>
-      <div className={style.childNav}>
+      <div className={style.childNavHCA}>
+      <Link to='/home' className={style.Link}><div className={style.childNavOption}>Home</div></Link>
+      <div className={style.childNavOption}>About</div>
+      <div className={style.childNavOption}>My pokemons</div>
+      <Link to='/create' className={style.Link}><div className={style.childNavOption}>Create</div></Link>
+      <div className={style.childNavOption}>
         <audio ref={audioRef} src={musicPokemon} /> {/* Elemento de audio con la referencia y la ruta del archivo de música */}
         <button onClick={handleMusicButtonClick}>
           {isMusicPlaying ? "Stop Music" : "Play Music"} {/* Texto del botón dependiendo del estado de reproducción de música */}
         </button>
+      </div>
       </div>
     </div>
   );

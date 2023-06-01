@@ -9,10 +9,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-image: url('../img/backgroundPokemon.jpg');
+    
     background-image: url('../img/greenBack.jpg');
     background: rgb(0, 0, 0);
     background-image: url('../img/backgroundPokemon.jpg');
+    background-image: url('../gif/electric.gif');
+    background-image: url('../img/backgroundPokemon.jpg');
+    background: rgb(84, 12, 12);
     width: 100vw;
     margin-top: 80px;
     gap: 80px;

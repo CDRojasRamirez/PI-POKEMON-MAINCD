@@ -44,6 +44,8 @@ const CreatePokemon = () => {
     console.log(inputState)
     return (
         <div className={style.containCreate}>
+            <h1>POKEMON CREATE</h1>
+            <div className={style.gifP}></div>
             <form className={style.formCreate} action="">
                 <input onChange={handleInput} name='name' type="text" placeholder="Enter a name" className={style.inputCreate}/>
                 <input onChange={handleInput} name='hp' type="number" placeholder="Enter a hp" className={style.inputCreate}/>
@@ -80,8 +82,8 @@ const CreatePokemon = () => {
                 <option value="dark" className={style.SelectOption}>Dark</option>
 
               </select>
-              <label htmlFor="">{inputState.types.length > 1 ? (inputState.types.slice(0, -1).join(", ") + inputState.types[inputState.types.length - 1]) : inputState.types.map(e => e)}</label>
-              <button onClick={handleCreate}>Create Pokemon</button>
+              <label htmlFor="" className={style.labelOption}>Selected: {inputState.types.length > 1 ? (inputState.types.slice(0, -1).join(", ") + inputState.types[inputState.types.length - 1]) : inputState.types.map(e => e)}</label>
+              <button onClick={handleCreate} className={style.btnCreate}>CREATE</button>
 
             </form>
         </div>

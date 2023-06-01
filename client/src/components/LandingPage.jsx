@@ -1,13 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import style from './LandingPage.module.css'
 
 const LandingPage = () => {
   return (
-    <div className="landing-page">
-      <h1>Bienvenido a mi Página de Inicio</h1>
-      <p>Esta es una página de inicio básica en React.</p>
-      <Link to='/home'><button>Comenzar</button></Link>
+    <>
+    <Link to='/home'>
+    <div className={style.containLanding}>
+      <h1 className={style.titulo}>DANIEL'S POKEMON</h1>
+      <h3 className={style.info}>Click on the screen to start</h3>
+      <div className={style.containGif}>
+        
+      </div>
     </div>
+    </Link>
+    </>
   );
 };
 
