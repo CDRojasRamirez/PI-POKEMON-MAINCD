@@ -58,10 +58,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 280px;
-    width: 200px;
+    height: 290px;
+    width: 225px;
     list-style: none;
-    border-radius: 10px;
+    border-radius: 6px;
     border: 10px solid rgb(147, 11, 11);
     box-shadow: 10px 0px 15px 5px rgb(0, 0, 0);
     position: relative;
@@ -101,7 +101,7 @@
     text-shadow: 5px 5px 10px rgb(0, 0, 0, 0.5);
     border: 2px solid rgb(255, 255, 255);
     padding: 0 10px;
-    border-radius: 5px;
+    border-radius: 50px;
     font-family: "Pokemon Solid" , Arial, sans-serif;
     letter-spacing: 5px;
 }
