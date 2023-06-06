@@ -167,7 +167,7 @@ Tu servidor deberá contar con las siguientes rutas:
 -  Toda la información debe ser recibida por body.
 -  Debe crear un pokemon en la base de datos, y este debe estar relacionado con sus tipos indicados (debe poder relacionarse al menos con dos).
 
-#### **📍 GET | /types**
+#### **📍 GET | /types**    
 
 -  Obtiene un arreglo con todos los tipos de pokemones.
 -  En una primera instancia, cuando la base de datos este vacía, deberás guardar todos los tipos que encuentres en la API.

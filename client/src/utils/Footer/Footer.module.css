@@ -67,6 +67,8 @@
     justify-content: space-between;
     padding: 20px;
     font-family: 'Courier New', Courier, monospace;
+    width: 98.45%;
+    
   }
   
   .section {
@@ -78,7 +80,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgb(4, 4, 4);
   }
   
   .title {

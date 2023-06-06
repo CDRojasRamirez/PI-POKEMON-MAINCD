@@ -24,7 +24,7 @@ const HomePage = ({AllPokemons, PokemonsFiltereds}) => {
   }
   
   return (
-    <div className="home-page">
+    <div className="home-page" style={{ overflow: 'auto', height: '100vh' }}>
       <div className={style.paginado}>
         <button onClick={handleBack}>⪻ Back</button>
         <div className={style.containLabels}>

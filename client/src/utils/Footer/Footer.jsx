@@ -12,7 +12,7 @@ import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <div className={styles.footer}>
       <div className={styles.section}>
         <h3 className={styles.title}>Daniel's Arcade</h3>
         <div className={styles.contactInfo}>
@@ -69,7 +69,7 @@ const Footer = () => {
           </span>
         </form>
       </div>
-    </footer>
+    </div>
   );
 };
 

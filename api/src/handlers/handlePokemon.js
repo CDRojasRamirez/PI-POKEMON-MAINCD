@@ -33,8 +33,9 @@ const getByNameH = async (req, res) => {
     try {
         const { name } = req.query;
          const apiPokemonsByName = await getByNameC(name)
-          res.status(200).json(apiPokemonsByName)
 
+          res.status(200).json(apiPokemonsByName)    
+          
         } catch (error) {
         res.status(404).json({error: error.message})
     }

@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getAllPokemons } from './redux/action';
 import CreatePokemon from './components/CreatePokemon/CreatePokemon';
+import Page404 from './components/Page404/Page404';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/home' ><ErrorBoundary><HomePage AllPokemons={AllPokemons} PokemonsFiltereds={PokemonsFiltereds}/></ErrorBoundary></Route>
         <Route path='/detail/:id' ><ErrorBoundary><DetailPage /></ErrorBoundary></Route>
         <Route path='/create' ><CreatePokemon /></Route>
+        <Route ><Page404 /></Route>
       </Switch>
     </div>
   );

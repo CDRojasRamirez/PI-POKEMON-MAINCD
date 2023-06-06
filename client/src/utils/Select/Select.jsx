@@ -1,13 +1,14 @@
 
 import style from './Select.module.css'
 import { useDispatch, useSelector } from "react-redux"
-import {reset, orderType, orderAD, orderApiDb } from '../../redux/action';
+import {reset, orderType, orderAD, orderApiDb, orderAttack } from '../../redux/action';
 import { useState } from 'react';
 
 
 const Select = () => {
 
   const [selectedType, setSelectedType] = useState("Types")
+  const [selectedDA, setSelectedDA] = useState("Destino")
 
 
   const dispatch = useDispatch()
@@ -17,9 +18,16 @@ const Select = () => {
 
       e.preventDefault()
       const { value } = e.target
+      
+      if(PokemonsFiltereds.length === 0){
+        setSelectedDA("Destino")
+      }
+
       return dispatch(orderApiDb(value))
 
   }
+
+  console.log(selectedDA)
 
   const handleTypeFilter = (e) => {
         e.preventDefault()
@@ -38,6 +46,13 @@ const Select = () => {
       return dispatch(orderAD(e.target.value))
   }
   console.log(selectedType)
+
+  const handleFilterAttack = (e) => {
+    e.preventDefault()
+    setSelectedType("Types")
+    
+    return dispatch(orderAttack(e.target.value))
+  }
   
   const handleReset = () => {
 
@@ -87,8 +102,22 @@ const Select = () => {
                 onChange={handleOrderFilter}
                 className={style.SelectOption}
               >
-                <option value="asc" className={style.SelectOption}>Ascendente</option>
-                <option value="desc" className={style.SelectOption}>Descendente</option>
+                <option value="" className={style.SelectOption}>A-Z-A</option>
+                <option value="asc" className={style.SelectOption}>A-Z</option>
+                <option value="desc" className={style.SelectOption}>Z-A</option>
+              </select>
+            </div>
+            <div className={style.containSelectOption}>
+              {/* <label htmlFor="order-filter" className={style.LabelSelectOption}>Orden:</label> */}
+              <select
+                id="order-filter"
+                // value={orderFilter}
+                onChange={handleFilterAttack}
+                className={style.SelectOption}
+              >
+                <option value="" className={style.SelectOption}>Attack</option>
+                <option value="attack+" className={style.SelectOption}>(+-) Attack</option>
+                <option value="attack-" className={style.SelectOption}>(-+) Attack</option>
               </select>
             </div>
 
@@ -101,9 +130,8 @@ const Select = () => {
                 // onChange={handleOrderFilter}
                 className={style.SelectOption}
                 onChange={ handleDestino }
-                defaultValue={"DEFAULT"}
               >
-                <option className={style.SelectOption} value="DEFAULT">Destino</option>
+                <option className={style.SelectOption}  selected={selectedType === 'Destino'}>{selectedDA}</option>
                 <option value="db" className={style.SelectOption}>DB</option>
                 <option value="api"  className={style.SelectOption}>API</option>
               </select>

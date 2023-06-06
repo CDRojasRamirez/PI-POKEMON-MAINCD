@@ -5,9 +5,8 @@ import { Link } from "react-router-dom";
 import { searchBar } from "../../redux/action";
 import { useDispatch, useSelector } from "react-redux";
 
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass, faUser } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = () => {
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
@@ -51,14 +50,12 @@ const Nav = () => {
   };
 
   const handleBtnSearch = () => {
-   
     dispatch(searchBar(namePokemon));
     setNamePokemon("");
     setIsSearchButtonDisabled(true); // Deshabilita el botón de búsqueda después de hacer clic en él
   };
 
   const handleKeyDown = (e) => {
-  
     if (e.key === "Enter") {
       dispatch(searchBar(namePokemon));
       setNamePokemon("");
@@ -68,7 +65,9 @@ const Nav = () => {
 
   return (
     <div className={style.containNav}>
-      <Link to='/' className={style.Link}><div className={style.childNavLogo}>Daniel's pokemon</div></Link>
+      <Link to="/" className={style.Link}>
+        <div className={style.childNavLogo}>Daniel's pokemon</div>
+      </Link>
       <div className={style.childNav}>
         <input
           type="text"
@@ -79,21 +78,38 @@ const Nav = () => {
           onKeyDown={handleKeyDown}
           className={style.inputName}
         />
-        <button onClick={handleBtnSearch} disabled={isSearchButtonDisabled} className={style.inputBtn}>
-        <FontAwesomeIcon icon={faMagnifyingGlass} className={style.iconLupa}/>
+        <button
+          onClick={handleBtnSearch}
+          disabled={isSearchButtonDisabled}
+          className={style.inputBtn}
+        >
+          <FontAwesomeIcon
+            icon={faMagnifyingGlass}
+            className={style.iconLupa}
+          />
         </button>
       </div>
       <div className={style.childNavHCA}>
-      <Link to='/home' className={style.Link}><div className={style.childNavOption}>Home</div></Link>
-      <div className={style.childNavOption}>About</div>
-      <div className={style.childNavOption}>My pokemons</div>
-      <Link to='/create' className={style.Link}><div className={style.childNavOption}>Create</div></Link>
-      <div className={style.childNavOption}>
-        <audio ref={audioRef} src={musicPokemon} /> {/* Elemento de audio con la referencia y la ruta del archivo de música */}
-        <button onClick={handleMusicButtonClick}>
-          {isMusicPlaying ? "Stop Music" : "Play Music"} {/* Texto del botón dependiendo del estado de reproducción de música */}
-        </button>
-      </div>
+        <Link to="/home" className={style.Link}>
+          <div className={style.childNavOption}>Home</div>
+        </Link>
+        <div className={style.childNavOption}>About</div>
+        <div className={style.childNavOption}>My pokemons</div>
+        <Link to="/create" className={style.Link}>
+          <div className={style.childNavOption}>Create</div>
+        </Link>
+        <div className={style.childNavOption}>
+          <audio ref={audioRef} src={musicPokemon} />{" "}
+          {/* Elemento de audio con la referencia y la ruta del archivo de música */}
+          <button
+            onClick={handleMusicButtonClick}
+            className={`${style.btnMusic} ${
+              isMusicPlaying ? style.greenButton : style.redButton
+            }`}
+          >
+            {isMusicPlaying ? "Stop 🎵" : "Play 🎵"}
+          </button>
+        </div>
       </div>
     </div>
   );

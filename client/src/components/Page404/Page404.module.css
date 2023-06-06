@@ -1,0 +1,49 @@
+.contain404 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(84, 12, 12);
+    height: 100vh;
+    width: 100vw;
+}
+
+.titulo404 {
+
+    font-size: 60px;
+    margin: 0;
+    color: white;
+}
+
+.info404 {
+
+    margin: 0;
+    color: white
+}
+
+.gif404 {
+
+    width: 200px;
+    height: 170px;
+    background-image: url('../../gif/pikachuTriste2.gif');;
+
+}
+
+.btn404 {
+
+    text-decoration: none;
+    margin: 20px;
+    padding: 15px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(26, 26, 26);
+    border-radius: 5px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+.btn404:hover {
+
+    opacity: 70%;
+}

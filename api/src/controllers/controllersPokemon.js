@@ -4,7 +4,7 @@ const { Pokemons, Types } = require('../db')
 const getAllPokemonsC = async () => {
 
 try {
-    const response = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=120")
+    const response = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=144")
         const subRequest = response.data.results.map((e) => axios.get(e.url));
         let promiseRequest = await Promise.all(subRequest);
         let pokemonApi = await promiseRequest.map((e) => {
@@ -90,36 +90,46 @@ const getByIdC = async (idPokemon) => {
 }
 
 const getByNameC = async (name) => {
-    try {
-        
-          const pokeByName = await axios.get(
-            `https://pokeapi.co/api/v2/pokemon/${name}`
-          );
-          if(typeof pokeByName.data.stats[0].base_stat === "undefined"){
-            return []
-          }
-          else{
-            return {
-              id: pokeByName?.data?.id,
-              name: pokeByName?.data?.name,
-              hp: pokeByName.data.stats[0].base_stat,
-              attack: pokeByName?.data?.stats[1]?.base_stat,
-              defense: pokeByName?.data?.stats[2]?.base_stat,
-              speed: pokeByName?.data?.stats[5]?.base_stat,
-              height: pokeByName?.data?.height,
-              weight: pokeByName?.data?.weight,
-              image:
-                pokeByName?.data?.sprites.versions["generation-v"]["black-white"]
-                  .front_default,
-              types: pokeByName?.data?.types?.map((e) => {
-                return { name: e.type.name };
-              }),
-            };
-          }
-       
-      } catch (error) {
-        console.log(error);
-      }
-    };
+  try {
+    const nameApi = name.toLowerCase();
+    let PokeAll = await Pokemons.findAll({
+      include: {
+        model: Types,
+        attributes: ["name"],
+        through: {
+          attributes: [],
+        },
+      },
+    });
+
+    const PokeDb =  PokeAll.filter(e => e.name.toLowerCase() === nameApi)
+    
+    if(PokeDb.length > 0) return PokeDb
+
+    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${nameApi}`);
+    const poke = response.data;
+
+    const PokeApi = [{
+      id: poke.id,
+      name: poke.name,
+      hp: poke.stats[0].base_stat,
+      attack: poke.stats[1]?.base_stat,
+      defense: poke.stats[2]?.base_stat,
+      speed: poke.stats[5]?.base_stat,
+      height: poke.height,
+      weight: poke.weight,
+      image: poke.sprites.versions["generation-v"]["black-white"].front_default,
+      types: poke.types?.map((e) => {
+        return { name: e.type.name };
+      }),
+    }];
+
+    return PokeApi
+
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 
 module.exports = { getAllPokemonsC, getByIdC, getByNameC }

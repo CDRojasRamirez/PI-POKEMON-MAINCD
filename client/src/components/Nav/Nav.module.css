@@ -15,6 +15,7 @@
     background-color: rgb(26, 26, 26);
     position: fixed;
     width: 100%;
+
     z-index: 1;
     top: 0;
 }
@@ -71,7 +72,7 @@
 .iconLupa {
 
     position: absolute;
-    left: 740px;
+    left: 725px;
     top: 27px;
     font-size: 30px;
     background: none;
@@ -137,3 +138,30 @@
 
     text-decoration: none;
 }
+
+.btnMusic {
+
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 600;
+    width: 120px;
+}
+
+.btnMusic:hover {
+
+    cursor: pointer;
+}
+
+.greenButton {
+    
+    background-color: rgb(255, 61, 61);
+    color: white;
+  }
+  
+  .redButton {
+    background-color: #59ff00;
+    color: rgb(38, 38, 38);
+  }
+  

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import style from './CreatePokemon.module.css'
 import { useDispatch } from 'react-redux'
 import { createPokemonR } from '../../redux/action'
+import { Link } from 'react-router-dom'
 
 const CreatePokemon = () => {
 
@@ -44,6 +45,7 @@ const CreatePokemon = () => {
     console.log(inputState)
     return (
         <div className={style.containCreate}>
+            <Link className={style.Back} to='/home'>⋘ Back</Link>
             <h1>POKEMON CREATE</h1>
             <div className={style.gifP}></div>
             <form className={style.formCreate} action="">

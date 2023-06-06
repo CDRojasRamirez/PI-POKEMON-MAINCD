@@ -1,6 +1,6 @@
 import axios from "axios";
 import style from "./DetailPage.module.css";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import sonidoRebote from '../../sounds/sonidoRebote.mp3'
 
@@ -32,7 +32,9 @@ const DetailPage = () => {
 
   return (
     <>
+    
       <div className={style.DetailGrid}>
+      <Link className={style.Back} to='/home'>⋘ Back</Link>
         {pokemonById &&
           pokemonById.map((pokemon) => {
             return (
