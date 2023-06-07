@@ -6,7 +6,7 @@ const PokemonsCard = ({ id, name, image, types }) => {
     <>
       <Link to={`/detail/${id}`} className={style.link}>
         { types[0].name === "fire" || types[0].name === "dragon" ? (
-          <li className={style.CardGrid} style={{ border: "5px solid rgb(255, 72, 0, .5)", backgroundImage: `url(${require('../../img/fire2Back.jpg')})`}}>
+          <li className={style.CardGrid} style={{ border: "3px solid red", backgroundImage: `url(${require('../../img/fire2Back.jpg')})`}}>
             <h1>{name}</h1>
             <img src={image} alt={name} className={style.image} />
             <p>

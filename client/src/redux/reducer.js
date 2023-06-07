@@ -177,6 +177,7 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         PokemonCreated: action.payload,
+        
       };
 
     /****************************************** SEARCH BAR ***********************************************/

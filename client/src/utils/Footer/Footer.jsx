@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.section}>
-        <h3 className={styles.title}>Daniel's Arcade</h3>
+        <h3 className={styles.title}>Daniel's Pokemon</h3>
         <div className={styles.contactInfo}>
           <div className={styles.contactItem}>
             <FontAwesomeIcon icon={faPhone} className={styles.onlyIcon} />
@@ -31,42 +31,47 @@ const Footer = () => {
         <ul className={styles.linkList}>
           <li>
             {/* <FontAwesomeIcon icon={faHome} className={styles.onlyIcon} /> */}
-            <a href="/">Home</a>
+            <a href="/">Inicio</a>
           </li>
           <li>
             {/* <FontAwesomeIcon icon={faInfoCircle} className={styles.onlyIcon}/> */}
-            <a href="/about">Acerca de</a>
+            <a href="/home">Home</a>
           </li>
           <li>
             {/* <FontAwesomeIcon icon={faHeart} className={styles.onlyIcon}/> */}
-            <a href="/favorites">Favoritos</a>
+            <a href="/create">Create</a>
           </li>
         </ul>
       </div>
       <div className={styles.section}>
         <h3 className={styles.title}>Redes Sociales</h3>
         <div className={styles.socialIcons}>
-          <FontAwesomeIcon icon={faLinkedin} className={styles.onlyIcon} />
-          <FontAwesomeIcon icon={faGithub} className={styles.onlyIcon} />
-          <FontAwesomeIcon icon={faInstagram} className={styles.onlyIcon} />
+          <a href="https://www.linkedin.com/in/cdrojasramirez/"><FontAwesomeIcon icon={faLinkedin} className={styles.onlyIcon} /></a>
+         <a href="https://github.com/CDRojasRamirez"><FontAwesomeIcon icon={faGithub} className={styles.onlyIcon}/></a>
+         <a href="https://www.instagram.com/danielrojas7719/"><FontAwesomeIcon icon={faInstagram} className={styles.onlyIcon} /></a>
         </div>
       </div>
       <div className={styles.section}>
         <h3 className={styles.title}>Mensaje</h3>
-        <form className={styles.messageForm}>
+        <form
+        className={styles.messageForm}
+        action='https://formspree.io/f/mbjevzpd'
+        method='POST'
+        >
           <textarea
-            type="text"
+            name='message'
             placeholder="Escribe un mensaje"
             className={styles.inputField}
           />
           <input
+            name='email'
             type="email"
-            placeholder="Email"
+            placeholder="Tu email"
             className={styles.inputField}
           />
-          <span type="submit" className={styles.sendMessageButton}>
+          <button type="submit" className={styles.sendMessageButton}>
             Enviar
-          </span>
+          </button>
         </form>
       </div>
     </div>

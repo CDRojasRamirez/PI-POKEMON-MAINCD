@@ -1,8 +1,18 @@
 import PokemonsCard from "../PokemonsCard/PokemonsCard";
 import style from "./Pokemons.module.css";
 import ErrorBoundary from "../../ErrorBoundary";
+import { useEffect, useState } from "react";
 
 const Pokemons = ({ AllPokemons, PokemonsFiltereds }) => {
+
+  const [pokemonList, setPokemonList] = useState(AllPokemons)
+
+  useEffect(() => {
+
+    setPokemonList(AllPokemons)
+
+  }, [AllPokemons])
+
   return (
     <>
       <div className={style.PokemonsContain}>
@@ -29,7 +39,7 @@ const Pokemons = ({ AllPokemons, PokemonsFiltereds }) => {
                   );
                 })
               : PokemonsFiltereds.length === 0
-              ? AllPokemons?.map((e) => {
+              ? pokemonList?.map((e) => {
                   return (
                     <ErrorBoundary>
                       <PokemonsCard
@@ -48,7 +58,7 @@ const Pokemons = ({ AllPokemons, PokemonsFiltereds }) => {
                     </ErrorBoundary>
                   );
                 })
-              : AllPokemons?.map((e) => {
+              : pokemonList?.map((e) => {
                   return (
                     <ErrorBoundary>
                       <PokemonsCard

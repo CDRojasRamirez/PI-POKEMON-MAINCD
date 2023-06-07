@@ -1,0 +1,61 @@
+.paginado {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: rgb(127, 0, 40);
+    width: 100vw;
+    /* margin-top: 80px; */
+    gap: 0px;
+    
+}
+
+.paginado button {
+
+    color: rgb(140, 255, 0);
+    font-size: 25px;
+    font-family: monospace;
+    border: none;
+    width: 200px;
+    font-family: "Pokemon Solid";
+    background: transparent;
+    letter-spacing: 5px;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0, .6);
+    margin-bottom: 15px;
+    /* overflow: hidden; */
+    /* object-fit: cover;  */
+    /* z-index: 0; */
+}
+
+.paginado button:hover {
+
+    cursor: pointer;
+    color: rgb(255, 242, 120);
+    box-sizing: border-box;
+    transform: scale(1.2);  
+}
+
+.containLabels {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    background: rgba(255, 196, 0, 0.193);
+    border: 3px solid red;
+    padding: 8px 30px;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    box-shadow: 2px 2px 3px 1px rgb(0, 0, 0);
+}
+
+.labelPrin {
+    color: white;
+    margin: 0;
+    font-size: 17px;
+    font-weight: 800;
+    font-family: "Pokemon Solid";
+    text-shadow: 5px 5px 5px rgb(0, 0, 0, .6);
+    letter-spacing: 5px;
+}

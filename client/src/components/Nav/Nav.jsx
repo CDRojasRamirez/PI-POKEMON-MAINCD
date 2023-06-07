@@ -93,8 +93,8 @@ const Nav = () => {
         <Link to="/home" className={style.Link}>
           <div className={style.childNavOption}>Home</div>
         </Link>
-        <div className={style.childNavOption}>About</div>
-        <div className={style.childNavOption}>My pokemons</div>
+        {/* <div className={style.childNavOption}>About</div>
+        <div className={style.childNavOption}>My pokemons</div> */}
         <Link to="/create" className={style.Link}>
           <div className={style.childNavOption}>Create</div>
         </Link>

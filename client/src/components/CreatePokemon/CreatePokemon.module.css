@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     background-image: url('../../img/mundoPoke.jpg');
-    background: rgb(84, 12, 12);
+    background: rgb(127, 0, 40);
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -23,7 +23,7 @@
     /* background-image: url('../../img/mundoPoke.jpg');
     background-size: cover; */
     /* box-shadow: 10px 0px 15px 5px rgb(0, 0, 0); */
-    width: 350px;
+    width: 500px;
     height: 450px;
     border-radius: 10px;
     margin-top: 40px;
@@ -60,6 +60,7 @@
     color: rgb(255, 255, 255);
     font-weight: 800;
     border: 2px solid rgb(255, 153, 0);
+    z-index: 9;
     
 }
 
@@ -84,6 +85,12 @@
     font-weight: 800;
 }
 
+.SelectOption:hover {
+
+    cursor: pointer;
+    opacity: 90%;
+}
+
 .labelOption {
 
     color: rgb(164, 164, 164);
@@ -106,11 +113,12 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 1px;
     font-weight: 800;
-    height: 200px;
+    height: 50px;
     width: 120px;
     border: 3px solid rgb(255, 255, 255);
     border-radius: 5px;
     background-size: cover;
+    z-index: 10;
 }
 
 .btnCreate:hover {
@@ -125,9 +133,32 @@
     position: absolute; 
     height: 300px;
     width: 250px;
-    right: 400px;
+    left: 300px;
     top: 400px;
     background-image: url('../../gif/pikachuSaludando.gif');
+}
+/* .imagePng {
+
+    position: absolute;
+    background-image: url('../../img/ashPokebola.png');
+    background-size: cover;
+    height: 690px;
+    width: 600px;
+    left: 900px;
+    bottom: 0;
+  
+} */
+
+.imagePokemons {
+    
+    position: absolute;
+    background-image: url('../../img/pokemons.png');
+    background-size: cover;
+    height: 650px;
+    width: 1330px;
+    left: 100px;
+    bottom: 0;
+    z-index: 0;
 }
 
 .Back {
@@ -143,6 +174,7 @@
     padding: 5px 10px;
     letter-spacing: 6px;
     text-shadow: 4px 4px 7px rgba(0, 0, 0);
+    z-index: 8;
         
     }
     .Back:hover {
@@ -152,4 +184,47 @@
       
       box-sizing: border-box;
       transform: scale(1.2);
+    }
+    .formChild2 {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        background: #f2ff00;
+        padding: 20px;
+        height: 400px;
+        width: px;
+    }
+
+    .errorContainer {
+        position: relative;
+        display: inline-block;
+      }
+
+    .errorLabel {
+
+        position: absolute;
+        color: rgb(187, 187, 187);
+        margin-left: 10px;
+        margin-top: 9px;
+        white-space: nowrap;
+        font-size: 15px;
+    }
+
+    .inputLabel {
+
+        position: absolute;
+        color: rgb(246, 255, 0);
+        margin-left: -90px;
+        margin-top: 8px;
+        white-space: nowrap;
+        font-size: 15px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        text-transform: uppercase;
+        font-style: italic;
+        border: 3px solid red;
+        width: 75px;
+        border-radius: 5px;
     }

@@ -10,7 +10,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 130px;
+    gap: 260px;
     padding: 12px;
     background-color: rgb(26, 26, 26);
     position: fixed;
@@ -72,7 +72,7 @@
 .iconLupa {
 
     position: absolute;
-    left: 725px;
+    left: 855px;
     top: 27px;
     font-size: 30px;
     background: none;
@@ -105,7 +105,7 @@
 }
 .childNavOption:hover {
 
-    color: #fffb07;
+    color: #ffd207;
     cursor: pointer;
 }
 

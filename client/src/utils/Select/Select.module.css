@@ -8,9 +8,11 @@
     background: rgb(255, 255, 255);
     z-index: 1;
     justify-content: center;
-    background: rgb(127, 0, 40);
+    margin-top: 82px;
+    
     background-image: url('../../img/fire2Back.jpg');
     background-image: url('../../img/backgroundPokemon.jpg');
+    background: rgb(127, 0, 40);
     
 }
 
@@ -48,11 +50,12 @@
   background: none;
   width: 100px;
 
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.8);
     font-family: monospace;
     font-weight: 1000;
-    background: #73ff00;
-    box-shadow: 2px 2px 3px 2px rgb(0, 0, 0);
+    background: rgba(255, 196, 0, 0.193);
+    border: 3px solid red;
+    box-shadow: 2px 2px 3px 1px rgb(0, 0, 0);
     border-radius: 3px;
 }
 
