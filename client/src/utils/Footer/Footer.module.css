@@ -151,12 +151,11 @@
   .socialIcons {
     display: flex;
     background-color: rgb(26, 26, 26);
-    
   }
   
   .socialIcons .onlyIcon {
     padding: 0;
-    margin-right: 30px;
+    margin: 10px;
     background-color: rgb(26, 26, 26);
   }
   

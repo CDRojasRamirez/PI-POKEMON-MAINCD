@@ -7,17 +7,20 @@ import {
   // faInfoCircle,
   // faHeart
 } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faInstagram, faWhatsapp} from '@fortawesome/free-brands-svg-icons';
 import styles from './Footer.module.css';
 
 const Footer = () => {
+   const phoneNumber = '924169968'; 
+    const message = 'Hola Daniel, vi tu proyecto de pokemon. Saludos!'; 
+
   return (
     <div className={styles.footer}>
       <div className={styles.section}>
         <h3 className={styles.title}>Daniel's Pokemon</h3>
         <div className={styles.contactInfo}>
           <div className={styles.contactItem}>
-            <FontAwesomeIcon icon={faPhone} className={styles.onlyIcon} />
+          <a href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}><FontAwesomeIcon icon={faWhatsapp} className={styles.onlyIcon} /></a>
             <span className={styles.icon}>+51 924169968</span>
           </div>
           <div className={styles.contactItem}>
@@ -27,11 +30,11 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.section}>
-        <h3 className={styles.title}>Enlaces</h3>
+        <h3 className={styles.title}>Links</h3>
         <ul className={styles.linkList}>
           <li>
             {/* <FontAwesomeIcon icon={faHome} className={styles.onlyIcon} /> */}
-            <a href="/">Inicio</a>
+            <a href="/">Start</a>
           </li>
           <li>
             {/* <FontAwesomeIcon icon={faInfoCircle} className={styles.onlyIcon}/> */}
@@ -44,7 +47,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className={styles.section}>
-        <h3 className={styles.title}>Redes Sociales</h3>
+        <h3 className={styles.title}>Social Networks</h3>
         <div className={styles.socialIcons}>
           <a href="https://www.linkedin.com/in/cdrojasramirez/"><FontAwesomeIcon icon={faLinkedin} className={styles.onlyIcon} /></a>
          <a href="https://github.com/CDRojasRamirez"><FontAwesomeIcon icon={faGithub} className={styles.onlyIcon}/></a>
@@ -52,7 +55,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.section}>
-        <h3 className={styles.title}>Mensaje</h3>
+        <h3 className={styles.title}>Menssage</h3>
         <form
         className={styles.messageForm}
         action='https://formspree.io/f/mbjevzpd'
@@ -60,17 +63,17 @@ const Footer = () => {
         >
           <textarea
             name='message'
-            placeholder="Escribe un mensaje"
+            placeholder="Enter a message"
             className={styles.inputField}
           />
           <input
             name='email'
             type="email"
-            placeholder="Tu email"
+            placeholder="Your email"
             className={styles.inputField}
           />
           <button type="submit" className={styles.sendMessageButton}>
-            Enviar
+            Send
           </button>
         </form>
       </div>
