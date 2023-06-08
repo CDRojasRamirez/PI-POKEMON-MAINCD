@@ -2,7 +2,7 @@
     font-family: "Pokemon Solid";
     src: url("../../fonts/pokemon_solid/pokemonsolid.ttf");
   }
-  
+
   @keyframes bounce {
     0% {
       transform: translateY(-50%) scale(0.8);
@@ -25,9 +25,7 @@
       transform: translateY(0) scale(1);
     }
   }
-  
-  
-  
+
 
 .CardGrid {
 
@@ -97,6 +95,11 @@
     width: 150px;
     border-radius: 10px;
     box-sizing: content-box;
+}
+
+.image:hover {
+
+  transform: scaleX(-1);
 }
 
 .ContainPowers {
