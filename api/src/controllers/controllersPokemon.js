@@ -134,7 +134,7 @@ const getByNameC = async (name) => {
 const postPokemonC = async (name, hp, attack, defense, speed, height, weight, image, types) => {
   try {
     const findPokemon = await Pokemons.findOne({
-      where: { name: name.toLowerCase() },//ver esto de lowerCase
+      where: { name: name.toLowerCase() },
     });//Solo se fija si existe entre los creados
     if (findPokemon) {
       return alert("Pokemon already exists");
@@ -154,7 +154,7 @@ const postPokemonC = async (name, hp, attack, defense, speed, height, weight, im
           name: types,
         },
       });
-      const PokemonCreatedTypes = await newPokemon.addTypes(pokemonType);
+      await newPokemon.addTypes(pokemonType);
 
       return newPokemon
     }

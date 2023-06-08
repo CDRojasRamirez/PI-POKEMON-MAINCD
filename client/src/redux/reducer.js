@@ -192,14 +192,7 @@ export const reducer = (state = initialState, action) => {
       };
 
     /****************************************** CREATE POKEMON ***********************************************/
-    case CREATE_POKEMON:
-      console.log(action.payload)
-      return {
-        ...state,
-        PokemonCreated: [...action.payload]
-        
-      };
-
+  
     /****************************************** SEARCH BAR ***********************************************/
     case SEARCH_BAR:
       console.log(action.payload);

@@ -47,6 +47,7 @@ const CreatePokemon = () => {
   const handleInput = (e) => {
     e.preventDefault();
     const { name, value } = e.target;
+    
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -60,9 +61,9 @@ const CreatePokemon = () => {
   const handleCreate = () => {
 
     if ((Object.keys(errors).length === 0 || typeof errors.name === "undefined") && formData.name !== "") {
-      const arr = Poke120.filter(e => e.name === formData.name)
+      const arr = Poke120.filter(e => e.name === formData.name.toLowerCase())
       if(arr.length !== 0){
-        alert("El nombre del pokemon ya existe!");
+        alert("The name of the pokemon already exists!");
       }else{
         dispatch(createPokemonR(formData));
         alert("Pokemon created!");
