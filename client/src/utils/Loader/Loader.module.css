@@ -1,0 +1,18 @@
+.containLoader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(127, 0, 40);
+  }
+  
+  .loader {
+
+    width: 480px;
+    height: 342px;
+    margin-bottom: 400px;
+    margin-left: 100px;
+    background-image: url('../../gif/pikachuCorriendo.gif');
+    transform: scaleX(-1); /* Muestra el gif en espejo */
+  }

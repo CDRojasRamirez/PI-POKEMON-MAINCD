@@ -21,9 +21,11 @@ function App() {
   }, [dispatch])  
   const { AllPokemons, PokemonsFiltereds } = useSelector(state => state)
 
+  const isDetailPage = location.pathname.includes('/detail/');
+
   return (
     <div className="App">
-      { location.pathname === '/' ? <LandingPage /> : <Nav /> }
+      { location.pathname === '/' ? <LandingPage /> : !isDetailPage &&  <Nav /> }
       <Switch>
         <Route path='/home' ><ErrorBoundary><HomePage AllPokemons={AllPokemons} PokemonsFiltereds={PokemonsFiltereds}/></ErrorBoundary></Route>
         <Route path='/detail/:id' ><ErrorBoundary><DetailPage /></ErrorBoundary></Route>

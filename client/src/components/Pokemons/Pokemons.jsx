@@ -1,29 +1,35 @@
-import PokemonsCard from "../PokemonsCard/PokemonsCard";
-import style from "./Pokemons.module.css";
-import ErrorBoundary from "../../ErrorBoundary";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
+import PokemonsCard from '../PokemonsCard/PokemonsCard';
+import style from './Pokemons.module.css';
+import ErrorBoundary from '../../ErrorBoundary';
+import Loader from '../../utils/Loader/Loader';
+
+
 
 const Pokemons = ({ AllPokemons, PokemonsFiltereds }) => {
-
-  const [pokemonList, setPokemonList] = useState(AllPokemons)
+  const [pokemonList, setPokemonList] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-
-    setPokemonList(AllPokemons)
-
-  }, [AllPokemons])
+    setTimeout(() => {
+      setPokemonList(AllPokemons);
+      setIsLoading(false);
+    }, 500);
+  }, [AllPokemons]);
 
   return (
     <>
       <div className={style.PokemonsContain}>
         <div className={style.Pokemons}>
-          <ul className={style.PokemonsGrid}>
-            {PokemonsFiltereds.length > 0
-              ? PokemonsFiltereds?.map((e) => {
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <ul className={style.PokemonsGrid}>
+              {PokemonsFiltereds.length > 0 ? (
+                PokemonsFiltereds.map((e) => {
                   return (
-                    <ErrorBoundary>
+                    <ErrorBoundary key={e?.id}>
                       <PokemonsCard
-                        key={e?.id}
                         id={e?.id}
                         name={e?.name}
                         image={e?.image}
@@ -38,12 +44,11 @@ const Pokemons = ({ AllPokemons, PokemonsFiltereds }) => {
                     </ErrorBoundary>
                   );
                 })
-              : PokemonsFiltereds.length === 0
-              ? pokemonList?.map((e) => {
+              ) : PokemonsFiltereds.length === 0 ? (
+                pokemonList.map((e) => {
                   return (
-                    <ErrorBoundary>
+                    <ErrorBoundary key={e?.id}>
                       <PokemonsCard
-                        key={e?.id}
                         id={e?.id}
                         name={e?.name}
                         image={e?.image}
@@ -58,11 +63,11 @@ const Pokemons = ({ AllPokemons, PokemonsFiltereds }) => {
                     </ErrorBoundary>
                   );
                 })
-              : pokemonList?.map((e) => {
+              ) : (
+                pokemonList.map((e) => {
                   return (
-                    <ErrorBoundary>
+                    <ErrorBoundary key={e?.id}>
                       <PokemonsCard
-                        key={e?.id}
                         id={e?.id}
                         name={e?.name}
                         image={e?.image}
@@ -76,8 +81,10 @@ const Pokemons = ({ AllPokemons, PokemonsFiltereds }) => {
                       />
                     </ErrorBoundary>
                   );
-                })}
-          </ul>
+                })
+              )}
+            </ul>
+          )}
         </div>
       </div>
     </>

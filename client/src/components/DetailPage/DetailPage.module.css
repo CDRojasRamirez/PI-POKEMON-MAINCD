@@ -54,7 +54,6 @@ position: relative;
     /* border: 10px solid rgb(255, 115, 0); */
     box-shadow: 10px 0px 15px 5px rgb(0, 0, 0);
     position: relative;
-    top: 35px;
     background-image: url('../../img/mundoPoke.jpg');
     background-size: cover;
     color: aliceblue;
@@ -65,10 +64,10 @@ position: relative;
 
 .Back {
   position: absolute;
-  top: 90px;
+  top: 50px;
   left: 60px;
   text-decoration: none;
-  color: rgb(255, 242, 120);
+  color: rgb(64, 255, 0);
   font-family: 'Pokemon solid';
   font-size: 27px;
   font-weight: 800;
@@ -81,8 +80,7 @@ position: relative;
   .Back:hover {
   
     cursor: pointer;
-    color: rgb(64, 255, 0);
-    
+    color: rgb(255, 242, 120);
     box-sizing: border-box;
     transform: scale(1.2);
   }
