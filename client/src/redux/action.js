@@ -1,4 +1,4 @@
-import { GET_ALL_POKEMONS, NEXT, BACK, ORDER_AD, ORDER_TYPE, ORDER_APIDB, RESET, CREATE_POKEMON, SEARCH_BAR, ORDER_ATTACK } from "./action-type";
+import { GET_ALL_POKEMONS, NEXT, BACK, ORDER_AD, ORDER_TYPE, ORDER_APIDB, RESET, CREATE_POKEMON, SEARCH_BAR, ORDER_ATTACK, ORDER_AZ } from "./action-type";
 import axios from "axios";
 
 export const getAllPokemons = () => {
@@ -25,6 +25,10 @@ export const back = () => {
 export const orderAD = (AscDesc) => {
 
   return { type: ORDER_AD, payload: AscDesc}
+}
+export const orderAZ = (AzA) => {
+
+  return { type: ORDER_AZ, payload: AzA}
 }
 export const orderType = (typePokemon) => {
 
@@ -55,14 +59,8 @@ export const createPokemonR = (datita) => {
 
 export const searchBar = (name) => {
 
-  try {
     return async (dispatch) => {
-      const res = (await axios.get(`http://localhost:3005/pokemon/name?name=${name}`))
-      // let arr= []; //tiene q estar en un array
-      //   arr.push(res.data)
-          dispatch({ type: SEARCH_BAR, payload: res.data })    
-    }
-  } catch (error) {
-    console.log(error)
-  }
-}
+      const res = await axios.get(`http://localhost:3005/pokemon/name?name=${name}`);
+      dispatch({ type: SEARCH_BAR, payload: res.data });
+    };
+};

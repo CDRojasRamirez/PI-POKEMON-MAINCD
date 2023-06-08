@@ -36,7 +36,7 @@
     
     margin: 0;
     padding: 10px;
-    background: rgb(4, 4, 4);
+    background-color: rgb(26, 26, 26);
     /* border-bottom: 20px solid black; */
 
     /* position: fixed;
@@ -60,7 +60,7 @@
 
 
 .footer {
-    background: rgb(4, 4, 4);
+    background-color: rgb(26, 26, 26);
     color: white;
     display: flex;
     flex-wrap: wrap;
@@ -86,26 +86,26 @@
     font-family: 'Press Start 2P', cursive;
     font-size: 18px;
     margin-bottom: 30px;
-    background: rgb(4, 4, 4);
+    background-color: rgb(26, 26, 26);
   }
   
   .contactInfo {
     display: flex;
     flex-direction: column;
-    background: rgb(4, 4, 4);
+    background-color: rgb(26, 26, 26);
   }
   
   .contactItem {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
-    background: rgb(4, 4, 4);
+    background-color: rgb(26, 26, 26);
   }
   
   .icon {
     font-size: 18px;
     margin-right: 5px;
-    background: rgb(4, 4, 4);
+    background-color: rgb(26, 26, 26);
   }
   
   .onlyIcon {
@@ -113,7 +113,7 @@
     font-size: 30px;
     margin-right: 5px;
     color: #00ff08;
-    background: rgb(4, 4, 4);
+    background-color: rgb(26, 26, 26);
   }
 
   .onlyIcon:hover {
@@ -126,21 +126,21 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    background: rgb(4, 4, 4);
+    background-color: rgb(26, 26, 26);
   }
   
   .linkList li {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
-    background: rgb(4, 4, 4);
+    background-color: rgb(26, 26, 26);
   }
   
   .linkList li a {
     color: white;
     text-decoration: none;
     margin-left: 5px;
-    background: rgb(4, 4, 4);
+    background-color: rgb(26, 26, 26);
   }
 
   .linkList li a:hover {
@@ -150,21 +150,21 @@
   
   .socialIcons {
     display: flex;
-    background: rgb(4, 4, 4);
+    background-color: rgb(26, 26, 26);
     
   }
   
   .socialIcons .onlyIcon {
     padding: 0;
     margin-right: 30px;
-    background: rgb(4, 4, 4);
+    background-color: rgb(26, 26, 26);
   }
   
   .messageForm {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background: rgb(4, 4, 4);
+    background-color: rgb(26, 26, 26);
   }
   
   .inputField {
@@ -175,7 +175,7 @@
     background-color: transparent;
     color: white;
     resize: none;
-    background: rgb(4, 4, 4);
+    background-color: rgb(26, 26, 26);
   }
   
   .sendMessageButton {
@@ -185,7 +185,7 @@
     border: 1px solid white;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    background: rgb(4, 4, 4);
+    background-color: rgb(26, 26, 26);
   }
   
   .sendMessageButton:hover {

@@ -2,14 +2,12 @@ import axios from "axios";
 import style from "./DetailPage.module.css";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
-import sonidoRebote from '../../sounds/sonidoRebote.mp3'
 
 const DetailPage = () => {
   const { id } = useParams();
   const [pokemonById, setPokemonById] = useState([]);
 
   const detailRef = useRef(null);
-  const sonidoReb = useRef(new Audio(sonidoRebote));
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,9 +23,7 @@ const DetailPage = () => {
   }, [id]);
 
   const handleBounceAnimation = () => {
-    
     detailRef.current.classList.add(style.bounce);
-    // sonidoReb.current.play();
   };
 
   return (

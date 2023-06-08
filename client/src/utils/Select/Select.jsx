@@ -1,15 +1,17 @@
 
 import style from './Select.module.css'
 import { useDispatch, useSelector } from "react-redux"
-import {reset, orderType, orderAD, orderApiDb, orderAttack } from '../../redux/action';
+import {reset, orderType, orderAD, orderAZ, orderApiDb, orderAttack } from '../../redux/action';
 import { useState } from 'react';
 
 
 const Select = () => {
 
   const [selectedType, setSelectedType] = useState("Types")
-  const [selectedDA, setSelectedDA] = useState("Destino")
-
+  const [selectedDA, setSelectedDA] = useState("Destiny")
+  const [selectedAttack, setSelectedAttack] = useState("Attack")
+  const [selectedAZ, setSelectedAZ] = useState("A-Z-A")
+  const [selectedAscDes, setSelectedAscDes] = useState("Ascending")
 
   const dispatch = useDispatch()
   const { PokemonsFiltereds } = useSelector(state => state)
@@ -18,12 +20,13 @@ const Select = () => {
 
       e.preventDefault()
       const { value } = e.target
-      
-      if(PokemonsFiltereds.length === 0){
-        setSelectedDA("Destino")
-      }
 
-      return dispatch(orderApiDb(value))
+      
+      setSelectedDA(value)
+      dispatch(orderApiDb(value))
+      if(PokemonsFiltereds.length === 0){
+        return setSelectedDA("Destiny")
+      }
 
   }
 
@@ -32,44 +35,62 @@ const Select = () => {
   const handleTypeFilter = (e) => {
         e.preventDefault()
         setSelectedType(e.target.value)
-        if(PokemonsFiltereds.length === 0){
-          setSelectedType("Types")
-        }
       return dispatch(orderType(e.target.value))
   }
 
-  const handleOrderFilter = (e) => {
+  const handleOrderAZ = (e) => {
 
         e.preventDefault()
-        setSelectedType("Types")
+        setSelectedAZ(e.target.value)
         
-      return dispatch(orderAD(e.target.value))
+      dispatch(orderAZ(e.target.value))
   }
   console.log(selectedType)
 
   const handleFilterAttack = (e) => {
     e.preventDefault()
-    setSelectedType("Types")
-    
-    return dispatch(orderAttack(e.target.value))
+
+    setSelectedAttack(e.target.value)
+    dispatch(orderAttack(e.target.value))
   }
   
+  const handleAscDes = (e) => {
+    e.preventDefault()
+    
+    setSelectedAscDes(e.target.value)
+    dispatch(orderAD(e.target.value))
+    
+  }
+
   const handleReset = () => {
 
-      return dispatch(reset())
+    setSelectedType("Types");
+    setSelectedDA("Destiny");
+    setSelectedAttack("Attack");
+    setSelectedAZ("A-Z-A");
+    setSelectedAscDes("Ascending");
+      dispatch(reset())
+      
   }
+
+  console.log(selectedType)
+  console.log(selectedAZ)
+  console.log(selectedAttack)
+  console.log(selectedDA)
+  console.log(selectedAscDes)
   
     return (
         <div className={style.containSelect}>
             
             <div className={style.containSelectOption}>
+            <label htmlFor="destiny-filter" className={style.LabelSelectOption}>Filters:</label>
               <select
                 id="genre-filter"
                 value={selectedType}
                 onChange={handleTypeFilter}
                 className={style.SelectOption}
               >
-                <option value={selectedType} className={style.SelectOption} selected={selectedType === 'types'}>{selectedType}</option>
+                <option value={selectedType} className={style.SelectOption}>{selectedType}</option>
                 <option value="normal" className={style.SelectOption}>Normal</option>
                 <option value="rock" className={style.SelectOption}>Rock</option>
                 <option value="fire" className={style.SelectOption}>Fire</option>
@@ -92,48 +113,61 @@ const Select = () => {
 
               </select>
             </div>
-
-
-            <div className={style.containSelectOption}>
-              {/* <label htmlFor="order-filter" className={style.LabelSelectOption}>Orden:</label> */}
-              <select
-                id="order-filter"
-                // value={orderFilter}
-                onChange={handleOrderFilter}
-                className={style.SelectOption}
-              >
-                <option value="" className={style.SelectOption}>A-Z-A</option>
-                <option value="asc" className={style.SelectOption}>A-Z</option>
-                <option value="desc" className={style.SelectOption}>Z-A</option>
-              </select>
-            </div>
-            <div className={style.containSelectOption}>
-              {/* <label htmlFor="order-filter" className={style.LabelSelectOption}>Orden:</label> */}
-              <select
-                id="order-filter"
-                // value={orderFilter}
-                onChange={handleFilterAttack}
-                className={style.SelectOption}
-              >
-                <option value="" className={style.SelectOption}>Attack</option>
-                <option value="attack+" className={style.SelectOption}>(+-) Attack</option>
-                <option value="attack-" className={style.SelectOption}>(-+) Attack</option>
-              </select>
-            </div>
-
+            
 
             <div className={style.containSelectOption}>
-              {/* <label htmlFor="destiny-filter" className={style.LabelSelectOption}>Destino:</label> */}
+              
               <select
                 id="destiny-filter"
-                // value={orderFilter}
+                value={selectedDA}
                 // onChange={handleOrderFilter}
                 className={style.SelectOption}
                 onChange={ handleDestino }
               >
-                <option className={style.SelectOption}  selected={selectedType === 'Destino'}>{selectedDA}</option>
-                <option value="db" className={style.SelectOption}>DB</option>
-                <option value="api"  className={style.SelectOption}>API</option>
+                <option value={selectedDA} className={style.SelectOption}>{selectedDA}</option>
+                <option value="DB" className={style.SelectOption}>DB</option>
+                <option value="API"  className={style.SelectOption}>API</option>
+              </select>
+            </div>
+
+            <div className={style.containSelectOption}>
+            <label htmlFor="destiny-filter" className={style.LabelSelectOption}>Orders:</label>
+              <select
+                id="order-filter"
+                onChange={handleAscDes}
+                className={style.SelectOption}
+                value={selectedAscDes}
+              >
+                {/* <option value={selectedAscDes} className={style.SelectOption} >{selectedAscDes}</option> */}
+                <option value="asc" className={style.SelectOption}>Ascending</option>
+                <option value="desc" className={style.SelectOption}>Descending</option>
+              </select>
+            </div>
+
+            <div className={style.containSelectOption}>
+              {/* <label htmlFor="order-filter" className={style.LabelSelectOption}>Orden:</label> */}
+              <select
+                id="order-filter"
+                value={selectedAZ}
+                onChange={handleOrderAZ}
+                className={style.SelectOption}
+              >
+                <option value={selectedAZ} className={style.SelectOption}>{selectedAZ}</option>
+                <option value="A-Z" className={style.SelectOption}>A-Z</option>
+                <option value="Z-A" className={style.SelectOption}>Z-A</option>
+              </select>
+            </div>
+            <div className={style.containSelectOption}>
+              {/* <label htmlFor="order-filter" className={style.LabelSelectOption}>Orden:</label> */}
+              <select
+                id="order-filter"
+                value={selectedAttack}
+                onChange={handleFilterAttack}
+                className={style.SelectOption}
+              >
+                <option value={selectedAttack} className={style.SelectOption}>{selectedAttack}</option>
+                <option value="(+-) Attack" className={style.SelectOption}>(+-) Attack</option>
+                <option value="(-+) Attack" className={style.SelectOption}>(-+) Attack</option>
               </select>
             </div>
 

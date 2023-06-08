@@ -7,64 +7,64 @@ export const validate = (form) => {
 
     /******************************************************************************  */
         if(form.name.split("").length > 12 || form.name.split("").length < 2){
-            err.name = '❌ Debe tener entre 2 y 12 caracteres'
+            err.name = '❌ Must be between 2 and 12 characters'
         }
         if (!/^[a-zA-Z]+$/.test(form.name)) {
-            err.name = "❌ No puede contener números";
+            err.name = "❌ Cannot contain numbers";
           }
           if (!alphanumericRegex.test(form.name)) {
-            err.name = "❌ No debe contener espacios ni caracteres especiales";
+            err.name = "❌ Must not contain spaces or special characters";
           }
     /******************************************************************************  */
 
         if(form.hp === 0 || form.hp < 0 || form.hp > 100){
-            err.hp = '❌ Debe tener entre 1 y 100 puntos'
+            err.hp = '❌ Must have between 1 and 100 points'
         }
         if (!alphanumericRegex.test(form.hp)) {
-            err.hp = "❌ No puede contener caracteres especiales";
+            err.hp = "❌ Cannot contain special characters";
           }
     /******************************************************************************  */
         if(form.attack === "" || form.attack < 0 || form.attack > 255){
-            err.attack = '❌ Debe tener entre 0 y 255 puntos'
+            err.attack = '❌ Must have between 0 and 255 points'
         }
         if (!alphanumericRegex.test(form.attack)) {
-            err.attack = "❌ No puede contener caracteres especiales";
+            err.attack = "❌ Cannot contain special characters";
           }
     /******************************************************************************  */
         if(form.defense === "" || form.defense < 0 || form.defense > 255 ){
-            err.defense = '❌ Debe tener entre 0 y 255 puntos'
+            err.defense = '❌ Must have between 0 and 255 points'
         }
         if (!alphanumericRegex.test(form.defense)) {
-            err.defense = "❌ No puede contener caracteres especiales";
+            err.defense = "❌ Cannot contain special characters";
           }
     /******************************************************************************  */
         if(form.speed === "" || form.speed < 1 || form.speed > 255 ){
-            err.speed = '❌ Debe tener entre 1 y 255 puntos'
+            err.speed = '❌ Must have between 1 and 255 points'
         }
         if (!alphanumericRegex.test(form.speed)) {
-            err.speed = "❌ No puede contener caracteres especiales";
+            err.speed = "❌ Cannot contain special characters";
           }
     /******************************************************************************  */
         if(form.height === "" || form.height < 1 || form.height > 20 ){
-            err.height = '❌ Debe tener entre 1 y 20 decimetros'
+            err.height = '❌ It must be between 1 and 20 decimeters'
         }
         if (!alphanumericRegex.test(form.height)) {
-            err.height= "❌ No puede contener caracteres especiales";
+            err.height= "❌ Cannot contain special characters";
           }
     /******************************************************************************  */
         if(form.weight === "" || form.weight < 1 || form.weight > 1000 ){
-            err.weight = '❌ Debe tener entre 1 y 1000 hectogramos'
+            err.weight = '❌ It must have between 1 and 1000 hectograms'
         } 
         if (!alphanumericRegex.test(form.weight)) {
-            err.weight = "❌ No puede contener caracteres especiales";
+            err.weight = "❌ Cannot contain special characters";
           }
     /******************************************************************************  */
         if(form.types.length === 0 || form.types.length > 2 ){
-            err.types = '❌ Debe tener 2 tipos como maximo'
+            err.types = '❌ Must have 2 types at most'
         }
     /******************************************************************************  */
         if(!regexIMG.test(form.image)){
-            err.image = '❌ Ingresa una url valida'
+            err.image = '❌ Enter a valid url'
         }
     /******************************************************************************  */
         return err

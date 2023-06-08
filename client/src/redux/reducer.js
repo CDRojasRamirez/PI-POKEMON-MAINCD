@@ -9,6 +9,7 @@ import {
   CREATE_POKEMON,
   SEARCH_BAR,
   ORDER_ATTACK,
+  ORDER_AZ,
 } from "./action-type";
 
 const initialState = {
@@ -17,7 +18,7 @@ const initialState = {
   PokemonsFiltereds: [],
   currentPage: 1,
   pokemonsPerPage: 12,
-  PokemonCreated: {},
+  PokemonCreated: []
 };
 // Función auxiliar para paginar los Pokémones
 const paginatePokemons = (pokemons, currentPage, pokemonsPerPage) => {
@@ -91,10 +92,28 @@ export const reducer = (state = initialState, action) => {
         return {
           ...state,
           PokemonsFiltereds: state.AllPokemons.sort((a, b) =>
-            b.name.localeCompare(a.name)
+            b.id - a.id
           ),
         };
       } else if (action.payload === "asc") {
+        return {
+          ...state,
+          PokemonsFiltereds: state.AllPokemons.sort((a, b) =>
+            a.id - b.id
+          ),
+        };
+      }
+      break;
+
+      case ORDER_AZ: 
+      if (action.payload === "Z-A") {
+        return {
+          ...state,
+          PokemonsFiltereds: state.AllPokemons.sort((a, b) =>
+            b.name.localeCompare(a.name)
+          ),
+        };
+      } else if (action.payload === "A-Z") {
         return {
           ...state,
           PokemonsFiltereds: state.AllPokemons.sort((a, b) =>
@@ -103,16 +122,15 @@ export const reducer = (state = initialState, action) => {
         };
       }
       break;
-
     case ORDER_ATTACK:
-      if (action.payload === "attack+") {
+      if (action.payload === "(+-) Attack") {
         return {
           ...state,
           PokemonsFiltereds: state.AllPokemons.sort(
             (a, b) => b.attack - a.attack
           ),
         };
-      } else if (action.payload === "attack-") {
+      } else if (action.payload === "(-+) Attack") {
         return {
           ...state,
           PokemonsFiltereds: state.AllPokemons.sort(
@@ -141,7 +159,7 @@ export const reducer = (state = initialState, action) => {
       }
     case ORDER_APIDB:
       try {
-        const isDbSelected = action.payload === "db";
+        const isDbSelected = action.payload === "DB";
         const filteredCharacters = state.AllPokemons.filter((char) => {
           return isDbSelected
             ? isNaN(Number(char?.id))
@@ -170,13 +188,15 @@ export const reducer = (state = initialState, action) => {
         ...state,
         PokemonsFiltereds: [],
         AllPokemons: state.AllPokemons.sort((a, b) => a.id - b.id),
+        
       };
 
     /****************************************** CREATE POKEMON ***********************************************/
     case CREATE_POKEMON:
+      console.log(action.payload)
       return {
         ...state,
-        PokemonCreated: action.payload,
+        PokemonCreated: [...action.payload]
         
       };
 

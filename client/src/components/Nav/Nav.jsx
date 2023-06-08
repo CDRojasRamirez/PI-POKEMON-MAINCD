@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import style from "./Nav.module.css";
 import musicPokemon from "../../sounds/Pokemon.mp3";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { searchBar } from "../../redux/action";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faUser } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = () => {
+  const location = useLocation();
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const audioRef = useRef(null); // Referencia al elemento de audio
 
@@ -90,14 +91,34 @@ const Nav = () => {
         </button>
       </div>
       <div className={style.childNavHCA}>
-        <Link to="/home" className={style.Link}>
-          <div className={style.childNavOption}>Home</div>
-        </Link>
+        {location.pathname === "/home" ? (
+          <Link to="/home" className={style.Link}>
+            <div className={style.childNavOption} style={{ color: "#ffb507" }}>
+              Home
+            </div>
+          </Link>
+        ) : (
+          <Link to="/home" className={style.Link}>
+            <div className={style.childNavOption} style={{ color: "white" }}>
+              Home
+            </div>
+          </Link>
+        )}
         {/* <div className={style.childNavOption}>About</div>
         <div className={style.childNavOption}>My pokemons</div> */}
-        <Link to="/create" className={style.Link}>
-          <div className={style.childNavOption}>Create</div>
-        </Link>
+        {location.pathname === "/create" ? (
+          <Link to="/create" className={style.Link}>
+            <div className={style.childNavOption} style={{ color: "#ffb507" }}>
+              Create
+            </div>
+          </Link>
+        ) : (
+          <Link to="/create" className={style.Link}>
+            <div className={style.childNavOption} style={{ color: "white" }}>
+              Create
+            </div>
+          </Link>
+        )}
         <div className={style.childNavOption}>
           <audio ref={audioRef} src={musicPokemon} />{" "}
           {/* Elemento de audio con la referencia y la ruta del archivo de música */}

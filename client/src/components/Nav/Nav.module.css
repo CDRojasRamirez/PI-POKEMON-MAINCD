@@ -76,7 +76,7 @@
     top: 27px;
     font-size: 30px;
     background: none;
-    color: #ffea07;
+    color: #ffb507;
 }
 
 .iconLupa:hover {
@@ -104,9 +104,9 @@
     text-shadow: 3px 4px 10px rgb(0, 0, 0);
 }
 .childNavOption:hover {
-
-    color: #ffd207;
+    
     cursor: pointer;
+    color: #ffb507;
 }
 
 .childNavLogo {

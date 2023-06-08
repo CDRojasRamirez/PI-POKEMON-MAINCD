@@ -27,21 +27,21 @@ const CreatePokemon = () => {
     const selectedType = e.target.value;
     if (formData.types.includes(selectedType)) {
       // Eliminar el tipo del array
-      setFormData((prevData) => ({
-        ...prevData,
-        types: prevData.types.filter((type) => type !== selectedType),
-      }));
+      setFormData({
+        ...formData,
+        types: formData.types.filter((type) => type !== selectedType),
+      });
     } else {
       // Agregar el tipo al array
-      setFormData((prevData) => ({
-        ...prevData,
-        types: [...prevData.types, selectedType],
-      }));
+      setFormData({
+        ...formData,
+        types: [...formData.types, selectedType],
+      });
     }
-    setErrors((prevErrors) => ({
-      ...prevErrors,
+    setErrors({
+      ...errors,
       ...validate({ ...formData, types: [...formData.types, selectedType] }),
-    }));
+    });
   };
 
   const handleInput = (e) => {
@@ -66,6 +66,18 @@ const CreatePokemon = () => {
       }else{
         dispatch(createPokemonR(formData));
         alert("Pokemon created!");
+        setFormData({
+          name: "",
+          hp: "",
+          attack: "",
+          defense: "",
+          speed: "",
+          height: "",
+          weight: "",
+          image: "",
+          types: [],
+        })
+        setErrors({})
       }
 
     } else {
@@ -73,6 +85,7 @@ const CreatePokemon = () => {
     }
   };
 
+  console.log(formData.types);
   console.log(errors)
   console.log(formData.name);
 
@@ -93,6 +106,7 @@ const CreatePokemon = () => {
             name="name"
             type="text"
             placeholder="Enter a name"
+            value={formData.name} 
             className={style.inputCreate}
           />
           {errors.name? (
@@ -106,6 +120,7 @@ const CreatePokemon = () => {
             name="hp"
             type="number"
             placeholder="Enter a hp"
+            value={formData.hp} 
             className={style.inputCreate}
           />
           {errors.hp ? <label className={style.errorLabel}>{errors.hp}</label> : formData.hp ? <label className={style.errorLabel}>✅</label> : <label className={style.errorLabel}></label>}
@@ -117,6 +132,7 @@ const CreatePokemon = () => {
             name="attack"
             type="number"
             placeholder="Enter an attack"
+            value={formData.attack} 
             className={style.inputCreate}
           />
           {errors.attack ? (
@@ -130,6 +146,7 @@ const CreatePokemon = () => {
             name="defense"
             type="number"
             placeholder="Enter a defense"
+            value={formData.defense} 
             className={style.inputCreate}
           />
           {errors.defense ? (
@@ -143,6 +160,7 @@ const CreatePokemon = () => {
             name="speed"
             type="number"
             placeholder="Enter a speed"
+            value={formData.speed} 
             className={style.inputCreate}
           />
           {errors.speed ? (
@@ -156,6 +174,7 @@ const CreatePokemon = () => {
             name="height"
             type="number"
             placeholder="Enter a height"
+            value={formData.height} 
             className={style.inputCreate}
           />
           {errors.height ? (
@@ -169,6 +188,7 @@ const CreatePokemon = () => {
             name="weight"
             type="number"
             placeholder="Enter a weight"
+            value={formData.weight} 
             className={style.inputCreate}
           />
           {errors.weight ? (
@@ -182,6 +202,7 @@ const CreatePokemon = () => {
             name="image"
             type="text"
             placeholder="Enter a link of image"
+            value={formData.image} 
             className={style.inputCreate}
           />
           {errors.image ? (
@@ -193,6 +214,7 @@ const CreatePokemon = () => {
             id="genre-filter"
             className={style.SelectOption}
             onChange={handleTypes}
+            value={formData.types} 
           >
             <option className={style.SelectOption}>Types</option>
             <option value="normal" className={style.SelectOption}>
@@ -253,9 +275,10 @@ const CreatePokemon = () => {
               Dark
             </option>
           </select>
-          {errors.types ? (
-            <label className={style.errorLabel}>{errors.types}</label>
-          ): formData.types.length !== 0 ? <label className={style.errorLabel}>✅</label> : <label className={style.errorLabel}></label>}
+          {formData.types.length > 0 && formData.types.length < 3
+          ? <label className={style.errorLabel}>✅</label>
+          : <label className={style.errorLabel}>{errors.types}</label>}
+
         </div>
 
         <label htmlFor="" className={style.labelOption}>

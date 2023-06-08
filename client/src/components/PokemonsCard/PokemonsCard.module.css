@@ -2,29 +2,6 @@
     font-family: "Pokemon Solid";
     src: url("../../fonts/pokemon_solid/pokemonsolid.ttf");
   }
-
-  /* @keyframes bounce {
-    0% {
-      transform: translateY(-50%) scale(0.8);
-      opacity: 0;
-    }
-    20% {
-      transform: translateY(0) scale(1.1);
-      opacity: 1;
-    }
-    40% {
-      transform: translateY(-10px) scale(0.9);
-    }
-    60% {
-      transform: translateY(-5px) scale(1.05);
-    }
-    80% {
-      transform: translateY(-2px) scale(0.95);
-    }
-    100% {
-      transform: translateY(0) scale(1);
-    }
-  } */
   
   @keyframes bounce {
     0% {
