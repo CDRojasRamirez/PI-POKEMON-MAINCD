@@ -1,7 +1,7 @@
 
 import style from './Select.module.css'
 import { useDispatch, useSelector } from "react-redux"
-import {reset, orderType, orderAD, orderAZ, orderApiDb, orderAttack } from '../../redux/action';
+import {reset, orderType, orderAD, orderAZ, orderApiDb, orderAttack, orderHp } from '../../redux/action';
 import { useState } from 'react';
 
 
@@ -11,7 +11,7 @@ const Select = () => {
   const [selectedDA, setSelectedDA] = useState("Destiny")
   const [selectedAttack, setSelectedAttack] = useState("Attack")
   const [selectedAZ, setSelectedAZ] = useState("A-Z-A")
-  const [selectedAscDes, setSelectedAscDes] = useState("Ascending")
+  const [selectedAscDes, setSelectedAscDes] = useState("Ascend")
 
   const dispatch = useDispatch()
   const { PokemonsFiltereds } = useSelector(state => state)
@@ -82,8 +82,10 @@ const Select = () => {
     return (
         <div className={style.containSelect}>
             
+            <div className={style.containOptionTotal}>
+
             <div className={style.containSelectOption}>
-            <label htmlFor="destiny-filter" className={style.LabelSelectOption}>Filters:</label>
+            {/* <label htmlFor="destiny-filter" className={style.LabelSelectOption}>Filters:</label> */}
               <select
                 id="genre-filter"
                 value={selectedType}
@@ -130,8 +132,12 @@ const Select = () => {
               </select>
             </div>
 
+            </div>
+
+            <div className={style.containOptionTotal}>
+
             <div className={style.containSelectOption}>
-            <label htmlFor="destiny-filter" className={style.LabelSelectOption}>Orders:</label>
+            {/* <label htmlFor="destiny-filter" className={style.LabelSelectOption}>Orders:</label> */}
               <select
                 id="order-filter"
                 onChange={handleAscDes}
@@ -139,8 +145,8 @@ const Select = () => {
                 value={selectedAscDes}
               >
                 {/* <option value={selectedAscDes} className={style.SelectOption} >{selectedAscDes}</option> */}
-                <option value="asc" className={style.SelectOption}>Ascending</option>
-                <option value="desc" className={style.SelectOption}>Descending</option>
+                <option value="asc" className={style.SelectOption}>Ascend</option>
+                <option value="desc" className={style.SelectOption}>Descend</option>
               </select>
             </div>
 
@@ -173,6 +179,8 @@ const Select = () => {
 
             <div className={style.containSelectOption}>
               <label onClick={ handleReset } className={style.SelectOption}>Reset</label>
+            </div>
+
             </div>
 
 

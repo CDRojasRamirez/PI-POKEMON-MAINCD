@@ -59,3 +59,283 @@
     text-shadow: 5px 5px 5px rgb(0, 0, 0, .6);
     letter-spacing: 5px;
 }
+
+
+/********************querys**************/
+
+@media screen and (max-width: 1440px) {
+    /* Estilos para pantallas con un ancho máximo de 1280px */
+   
+  }
+
+  @media screen and (max-width: 1024px) {
+    /* Estilos para pantallas con un ancho máximo de 1024px */
+    .paginado {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: rgb(127, 0, 40);
+        width: 100vw;
+        /* margin-top: 80px; */
+        gap: 0px;
+        
+    }
+    
+    .paginado button {
+    
+        color: rgb(140, 255, 0);
+        font-size: 30px;
+        font-family: monospace;
+        border: none;
+        width: 200px;
+        font-family: "Pokemon Solid";
+        background: transparent;
+        letter-spacing: 5px;
+        text-shadow: 5px 5px 5px rgb(0, 0, 0, .6);
+        margin-bottom: 15px;
+        /* overflow: hidden; */
+        /* object-fit: cover;  */
+        /* z-index: 0; */
+    }
+    
+    .paginado button:hover {
+    
+        cursor: pointer;
+        color: rgb(255, 242, 120);
+        box-sizing: border-box;
+        transform: scale(1.2);  
+    }
+    
+    .containLabels {
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        background: rgba(255, 196, 0, 0.193);
+        border: 3px solid red;
+        padding: 8px 30px;
+        border-radius: 10px;
+        padding-bottom: 15px;
+        box-shadow: 2px 2px 3px 1px rgb(0, 0, 0);
+        width: 220px;
+        margin: 10px 20px;
+    }
+    
+    .labelPrin {
+        color: white;
+        margin: 0;
+        font-size: 16px;
+        font-weight: 800;
+        font-family: "Pokemon Solid";
+        text-shadow: 5px 5px 5px rgb(0, 0, 0, .6);
+        padding: 2px;
+    }
+    
+  }
+
+  @media screen and (max-width: 992px) {
+    /* Estilos para pantallas con un ancho máximo de 992px */
+    .paginado {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: rgb(127, 0, 40);
+        width: 100vw;
+        /* margin-top: 80px; */
+        gap: 0px;
+        
+    }
+    
+    .paginado button {
+    
+        color: rgb(140, 255, 0);
+        font-size: 30px;
+        font-family: monospace;
+        border: none;
+        width: 200px;
+        font-family: "Pokemon Solid";
+        background: transparent;
+        letter-spacing: 5px;
+        text-shadow: 5px 5px 5px rgb(0, 0, 0, .6);
+        margin-bottom: 15px;
+        /* overflow: hidden; */
+        /* object-fit: cover;  */
+        /* z-index: 0; */
+    }
+    
+    .paginado button:hover {
+    
+        cursor: pointer;
+        color: rgb(255, 242, 120);
+        box-sizing: border-box;
+        transform: scale(1.2);  
+    }
+    
+    .containLabels {
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        background: rgba(255, 196, 0, 0.193);
+        border: 3px solid red;
+        padding: 8px 30px;
+        border-radius: 10px;
+        padding-bottom: 15px;
+        box-shadow: 2px 2px 3px 1px rgb(0, 0, 0);
+        width: 200px;
+    }
+    
+    .labelPrin {
+        color: white;
+        margin: 0;
+        font-size: 12px;
+        font-weight: 800;
+        font-family: "Pokemon Solid";
+        text-shadow: 5px 5px 5px rgb(0, 0, 0, .6);
+        padding: 2px;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    /* Estilos para pantallas con un ancho máximo de 540px */
+    .paginado {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: rgb(127, 0, 40);
+        width: 100vw;
+        /* margin-top: 80px; */
+        gap: 0px;
+        
+    }
+    
+    .paginado button {
+    
+        color: rgb(140, 255, 0);
+        font-size: 30px;
+        font-family: monospace;
+        border: none;
+        width: 200px;
+        font-family: "Pokemon Solid";
+        background: transparent;
+        letter-spacing: 2px;
+        text-shadow: 5px 5px 5px rgb(0, 0, 0, .6);
+        margin-bottom: 15px;
+        /* overflow: hidden; */
+        /* object-fit: cover;  */
+        /* z-index: 0; */
+    }
+    
+    .paginado button:hover {
+    
+        cursor: pointer;
+        color: rgb(255, 242, 120);
+        box-sizing: border-box;
+        transform: scale(1.2);  
+    }
+    
+    .containLabels {
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        background: rgba(255, 196, 0, 0.193);
+        border: 3px solid red;
+        padding: 8px 5px;
+        border-radius: 10px;
+        padding-bottom: 15px;
+        box-shadow: 2px 2px 3px 1px rgb(0, 0, 0);
+        width: 250px;
+    }
+    
+    .labelPrin {
+        color: white;
+        margin: 0;
+        font-size: 20px;
+        font-weight: 800;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+        text-shadow: 5px 5px 5px rgb(0, 0, 0, .6);
+
+    }
+  }
+
+  @media screen and (max-width: 412px) {
+    /* Estilos para pantallas con un ancho máximo de 540px */
+    .paginado {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: rgb(127, 0, 40);
+        width: 100vw;
+        /* margin-top: 80px; */
+        gap: 0px;
+        
+    }
+    
+    .paginado button {
+    
+        color: rgb(140, 255, 0);
+        font-size: 25px;
+        font-family: monospace;
+        border: none;
+        width: 50px;
+        font-family: "Pokemon Solid";
+        background: transparent;
+        letter-spacing: 2px;
+        text-shadow: 5px 5px 5px rgb(0, 0, 0, .6);
+        margin-bottom: 5px;
+        /* overflow: hidden; */
+        /* object-fit: cover;  */
+        /* z-index: 0; */
+    }
+    
+    .paginado button:hover {
+    
+        cursor: pointer;
+        color: rgb(255, 242, 120);
+        box-sizing: border-box;
+        transform: scale(1.2);  
+    }
+    
+    .containLabels {
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 7px;
+        background: rgba(255, 196, 0, 0.193);
+        border: 3px solid red;
+        padding: 8px 5px;
+        border-radius: 10px;
+        padding-bottom: 15px;
+        box-shadow: 2px 2px 3px 1px rgb(0, 0, 0);
+        width: 130px;
+    }
+    
+    .labelPrin {
+        color: white;
+        margin: 0;
+        font-size: 16px;
+        font-weight: 800;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+        text-shadow: 5px 5px 5px rgb(0, 0, 0, .6);
+
+    }
+  }
+  @media screen and (max-width: 280px) {
+    /* Estilos para pantallas con un ancho máximo de 540px */
+    
+  }
+
+  

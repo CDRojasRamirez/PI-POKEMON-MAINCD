@@ -27,3 +27,93 @@
   
 }
   
+  /********************querys**************/
+
+  @media screen and (max-width: 1500px) {
+    /* Estilos para pantallas con un ancho máximo de 1280px */
+    .PokemonsGrid{
+        background: rgb(127, 0, 40);
+        height: 100vh;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    /* Estilos para pantallas con un ancho máximo de 1280px */
+    .PokemonsGrid{
+        background: rgb(127, 0, 40);
+        height: 130vh;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    /* Estilos para pantallas con un ancho máximo de 1024px */
+    .PokemonsGrid{
+        background: rgb(127, 0, 40);
+        height: 170vh;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    /* Estilos para pantallas con un ancho máximo de 992px */
+    .PokemonsGrid{
+        background: rgb(127, 0, 40);
+        height: 180vh;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    /* Estilos para pantallas con un ancho máximo de 540px */
+    .PokemonsGrid{
+        background: rgb(127, 0, 40);
+        height: 250vh;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    /* Estilos para pantallas con un ancho máximo de 540px */
+    .PokemonsGrid{
+        background: rgb(127, 0, 40);
+        height: 300vh;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    /* Estilos para pantallas con un ancho máximo de 540px */
+    .PokemonsGrid{
+        background: rgb(127, 0, 40);
+        height: 380vh;
+    }
+  }
+
+  @media screen and (max-width: 415px) {
+    /* Estilos para pantallas con un ancho máximo de 540px */
+    .PokemonsGrid{
+        background: rgb(127, 0, 40);
+        height: 450vh;
+    }
+  }
+
+  @media screen and (max-width: 394px) {
+    /* Estilos para pantallas con un ancho máximo de 540px */
+    .PokemonsGrid{
+        background: rgb(127, 0, 40);
+        height: 500vh;
+    }
+  }
+
+  @media screen and (max-width: 376px) {
+    /* Estilos para pantallas con un ancho máximo de 540px */
+    .PokemonsGrid{
+        background: rgb(127, 0, 40);
+        height: 600vh;
+    }
+  }
+
+  @media screen and (max-width: 280px) {
+    /* Estilos para pantallas con un ancho máximo de 540px */
+    .PokemonsGrid{
+        background: rgb(127, 0, 40);
+        height: 650vh;
+    }
+  }
+
+  
