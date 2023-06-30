@@ -50,3 +50,118 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
 }
+
+
+/********************querys**************/
+
+@media screen and (max-width: 560px) {
+
+  .containLanding{
+
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background: rgb(14, 103, 65);
+    background-image: url('../img/mundoPoke.jpg');
+    background-image: url('../gif/charizardHD.gif');
+    background-size:contain;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.containLanding h1 {
+
+    font-family: 'Pokemon solid';
+    color: white;
+    letter-spacing: 6px;
+    font-size: 40px;
+    margin: 0;
+    animation: floatAnimation 3s infinite;
+}
+
+
+.info {
+
+    margin: 0;
+    margin-top: 10px;
+    color: rgb(167, 167, 167);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .containLanding h1 {
+  
+      font-family: 'Pokemon solid';
+      color: white;
+      letter-spacing: 6px;
+      font-size: 30px;
+      margin: 0;
+      animation: floatAnimation 3s infinite;
+  }
+  
+  
+  .info {
+  
+      margin: 0;
+      margin-top: 10px;
+      color: rgb(167, 167, 167);
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+  }
+  
+  }
+
+@media screen and (max-width: 400px) {
+  /* Estilos para pantallas con un ancho máximo de 540px */
+  
+  .containLanding h1 {
+  
+    font-family: 'Pokemon solid';
+    color: white;
+    letter-spacing: 6px;
+    font-size: 26px;
+    margin: 0;
+    animation: floatAnimation 3s infinite;
+}
+
+
+.info {
+
+    margin: 0;
+    margin-top: 10px;
+    color: rgb(167, 167, 167);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+}
+
+@media screen and (max-width: 400px) {
+  /* Estilos para pantallas con un ancho máximo de 540px */
+  
+  .containLanding h1 {
+  
+    font-family: 'Pokemon solid';
+    color: white;
+    letter-spacing: 6px;
+    font-size: 18px;
+    margin: 0;
+    animation: floatAnimation 3s infinite;
+}
+
+
+.info {
+
+    margin: 0;
+    margin-top: 10px;
+    color: rgb(167, 167, 167);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
+}

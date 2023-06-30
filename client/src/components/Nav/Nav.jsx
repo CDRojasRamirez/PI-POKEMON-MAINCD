@@ -3,10 +3,12 @@ import style from "./Nav.module.css";
 import musicPokemon from "../../sounds/Pokemon.mp3";
 import { Link, useLocation } from "react-router-dom";
 import { searchBar } from "../../redux/action";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+
+import pikachu from '../../img/pikachu.jpg'
 
 const Nav = () => {
   const location = useLocation();
@@ -14,7 +16,6 @@ const Nav = () => {
   const audioRef = useRef(null); // Referencia al elemento de audio
 
   const dispatch = useDispatch();
-  const { PokemonsFiltereds } = useSelector((state) => state);
   const [namePokemon, setNamePokemon] = useState("");
   const [isSearchButtonDisabled, setIsSearchButtonDisabled] = useState(true);
 
@@ -119,6 +120,16 @@ const Nav = () => {
             </div>
           </Link>
         )}
+
+        {/* <div className="dropdown dropdown-hover">
+        <label tabIndex={0} className="btn m-1">Hover</label>
+        <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a>Item 1</a></li>
+        <li><a>Item 2</a></li>
+        </ul>
+        </div> */}
+
+
         <div className={style.childNavOption}>
           <audio ref={audioRef} src={musicPokemon} />{" "}
           {/* Elemento de audio con la referencia y la ruta del archivo de música */}
@@ -128,9 +139,17 @@ const Nav = () => {
               isMusicPlaying ? style.greenButton : style.redButton
             }`}
           >
-            {isMusicPlaying ? "Stop 🎵" : "Play 🎵"}
+            {isMusicPlaying ? "🎵" : "🎵"}
           </button>
         </div>
+
+
+        {/* <div className="avatar">
+       <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+      <img src={pikachu} alt="Imagen" />
+    </div>
+    </div> */}
+
       </div>
     </div>
   );

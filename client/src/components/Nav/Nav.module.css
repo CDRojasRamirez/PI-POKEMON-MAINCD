@@ -10,11 +10,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 260px;
-    padding: 12px;
+    gap: 200px;
+    padding: 5px 12px;
     background-color: rgb(26, 26, 26);
     position: fixed;
     width: 100%;
+    height: 85px;
 
     z-index: 1;
     top: 0;
@@ -33,7 +34,7 @@
 
 .inputName {
 
-    width: 300px;
+    height: 80px;
     padding: 15px;
     font-size: 15px;
     box-shadow: 5px 5px 15px rgb(0, 0, 0);
@@ -61,20 +62,18 @@
     box-shadow: 2px 2px 15px #7f07ff inset;
 }
 
-.inputBtn {
+/* .inputBtn {
 
     padding: 15px;
     background: transparent;
     border: none;
     color: white;
-}
+} */
 
 .iconLupa {
 
-    position: absolute;
-    left: 855px;
-    top: 27px;
-    font-size: 30px;
+    margin-left: 10px;
+    font-size: 20px;
     background: none;
     color: #ffb507;
 }
@@ -164,4 +163,457 @@
     background-color: #59ff00;
     color: rgb(38, 38, 38);
   }
+  
+
+  /********************querys**************/
+
+  @media screen and (max-width: 1440px) {
+    /* Estilos para pantallas con un ancho máximo de 1280px */
+
+    .containNav {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+        padding: 5px 12px;
+        background-color: rgb(26, 26, 26);
+        position: fixed;
+        width: 100%;
+        height: 5.313rem;
+    
+        z-index: 1;
+        top: 0;
+    }
+
+    .iconLupa {
+
+        margin-left: 10px;
+    font-size: 20px;
+    background: none;
+    color: #ffb507;
+    }
+    
+  }
+
+  @media screen and (max-width: 1024px) {
+    /* Estilos para pantallas con un ancho máximo de 1024px */
+
+    .containNav {
+
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(26, 26, 26);
+        position: fixed;
+        width: 100%;
+        height: 5.313rem;
+    
+        z-index: 1;
+        top: 0;
+    }
+
+    .iconLupa {
+
+        margin-left: 10px;
+    font-size: 1.125rem;
+    background: none;
+    color: #ffb507;
+    }
+
+    .childNavHCA {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Press Start 2P', cursive;
+        gap: 15px;
+    }
+    
+    .childNavLogo {
+
+        width: 200px;
+        color: white;
+        text-transform: uppercase;
+        font-family: "Pokemon solid";
+        font-weight: 800;
+        letter-spacing: 3px;
+        font-size: 16px;
+        padding: 0;
+        color: #f2ff00;
+        -webkit-text-stroke: 1px rgb(255, 0, 0);
+        text-shadow: 5px 5px 15px rgb(0, 0, 0);
+    }
+    
+    .childNavLogo:hover {
+    
+        transform: scale(1.1);
+    }
+
+    
+.inputName {
+
+    height: 80px;
+    padding: 15px;
+    font-size: 12px;
+    box-shadow: 5px 5px 15px rgb(0, 0, 0);
+
+}
+
+.inputName::placeholder{
+    color: rgba(255, 255, 255, 0.921);
+    font-size: 12px;
+}
+
+.inputName{
+    color: #ffffff;
+    border: 2px solid #870000;
+    border-radius: 10px;
+    padding: 10px 25px;
+    background: transparent;
+    width: 200px;
+    height: 40px;
+    font-size: 12px;
+}
+   
+.inputName:active {
+    box-shadow: 2px 2px 15px #7f07ff inset;
+}
+    
+  }
+
+  @media screen and (max-width: 992px) {
+    /* Estilos para pantallas con un ancho máximo de 992px */
+    
+    .containNav {
+
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(26, 26, 26);
+        position: fixed;
+        width: 100%;
+        height: 5.313rem;
+    
+        z-index: 1;
+        top: 0;
+    }
+
+    .iconLupa {
+
+      
+    font-size: 1.125rem;
+    background: none;
+    color: #ffb507;
+    }
+
+    .childNavHCA {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .childNavLogo {
+
+        width: 40px;
+        color: white;
+        text-transform: uppercase;
+        font-family: "Pokemon solid";
+        font-weight: 800;
+        letter-spacing: 3px;
+        font-size: 16px;
+        padding: 0;
+        color: #f2ff00;
+        -webkit-text-stroke: 1px rgb(255, 0, 0);
+        text-shadow: 5px 5px 15px rgb(0, 0, 0);
+    }
+    
+    .childNavLogo:hover {
+    
+        transform: scale(1.1);
+    }
+
+.inputName::placeholder{
+    color: rgba(255, 255, 255, 0.921);
+    font-size: 12px;
+}
+
+.inputName{
+    color: #ffffff;
+    border: 2px solid #870000;
+    border-radius: 10px;
+    padding: 10px 25px;
+    background: transparent;
+    width: 200px;
+    height: 40px;
+    font-size: 12px;
+    box-shadow: 5px 5px 15px rgb(0, 0, 0);
+
+}
+   
+.inputName:active {
+    box-shadow: 2px 2px 15px #7f07ff inset;
+}
+  }
+
+  @media screen and (max-width: 710px) {
+    /* Estilos para pantallas con un ancho máximo de 992px */
+    
+    .containNav {
+
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(26, 26, 26);
+        position: fixed;
+        width: 100%;
+        height: 11rem;
+        gap: 20px;
+        z-index: 1;
+        top: 0;
+    }
+
+    .iconLupa {
+        position: inherit;
+        margin-left: 10px;
+    font-size: 1.125rem;
+    background: none;
+    color: #ffb507;
+    }
+
+    .childNavHCA {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Press Start 2P', cursive;
+        gap: 15px;
+    }
+    
+    .childNavLogo {
+
+        width: 230px;
+        color: white;
+        text-transform: uppercase;
+        font-family: "Pokemon solid";
+        font-weight: 800;
+        letter-spacing: 3px;
+        font-size: 20px;
+        padding: 0;
+        color: #f2ff00;
+        -webkit-text-stroke: 1px rgb(255, 0, 0);
+        text-shadow: 5px 5px 15px rgb(0, 0, 0);
+    }
+    
+    .childNavLogo:hover {
+    
+        transform: scale(1.1);
+    }
+
+    
+.inputName {
+
+    height: 80px;
+    padding: 15px;
+    font-size: 14px;
+    box-shadow: 5px 5px 15px rgb(0, 0, 0);
+
+}
+
+.inputName::placeholder{
+    color: rgba(255, 255, 255, 0.921);
+    font-size: 12px;
+}
+
+.inputName{
+    color: #ffffff;
+    border: 2px solid #870000;
+    border-radius: 10px;
+    padding: 10px 25px;
+    background: transparent;
+    width: 200px;
+    height: 40px;
+    font-size: 12px;
+}
+   
+.inputName:active {
+    box-shadow: 2px 2px 15px #7f07ff inset;
+}
+    
+.childNavHCA{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+    
+}
+.childNavOption {
+
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 12px;
+    text-shadow: 3px 4px 10px rgb(0, 0, 0);
+    width: 65px;
+}
+
+.btnMusic {
+
+    padding: 2px 2px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 600;
+    width: 60px;
+}
+
+.greenButton {
+    
+    background-color: rgb(255, 61, 61);
+    color: white;
+  }
+  
+  .redButton {
+    background-color: #59ff00;
+    color: rgb(38, 38, 38);
+  }
+  
+  }
+
+  @media screen and (max-width: 540px) {
+    /* Estilos para pantallas con un ancho máximo de 1024px */
+
+    .containNav {
+
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(26, 26, 26);
+        position: fixed;
+        width: 100%;
+        height: 11rem;
+        gap: 20px;
+        z-index: 1;
+        top: 0;
+    }
+
+    .iconLupa {
+        position: inherit;
+        margin-left: 10px;
+    font-size: 1.125rem;
+    background: none;
+    color: #ffb507;
+    }
+
+    .childNavHCA {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Press Start 2P', cursive;
+        gap: 15px;
+    }
+    
+    .childNavLogo {
+
+        width: 230px;
+        color: white;
+        text-transform: uppercase;
+        font-family: "Pokemon solid";
+        font-weight: 800;
+        letter-spacing: 3px;
+        font-size: 20px;
+        padding: 0;
+        color: #f2ff00;
+        -webkit-text-stroke: 1px rgb(255, 0, 0);
+        text-shadow: 5px 5px 15px rgb(0, 0, 0);
+    }
+    
+    .childNavLogo:hover {
+    
+        transform: scale(1.1);
+    }
+
+    
+.inputName {
+
+    height: 80px;
+    padding: 15px;
+    font-size: 14px;
+    box-shadow: 5px 5px 15px rgb(0, 0, 0);
+
+}
+
+.inputName::placeholder{
+    color: rgba(255, 255, 255, 0.921);
+    font-size: 12px;
+}
+
+.inputName{
+    color: #ffffff;
+    border: 2px solid #870000;
+    border-radius: 10px;
+    padding: 10px 25px;
+    background: transparent;
+    width: 200px;
+    height: 40px;
+    font-size: 12px;
+}
+   
+.inputName:active {
+    box-shadow: 2px 2px 15px #7f07ff inset;
+}
+    
+.childNavHCA{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+    
+}
+.childNavOption {
+
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 12px;
+    text-shadow: 3px 4px 10px rgb(0, 0, 0);
+    width: 65px;
+}
+
+.btnMusic {
+
+    padding: 2px 2px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 600;
+    width: 60px;
+}
+
+.greenButton {
+    
+    background-color: rgb(255, 61, 61);
+    color: white;
+  }
+  
+  .redButton {
+    background-color: #59ff00;
+    color: rgb(38, 38, 38);
+  }
+  
+  }
+
   

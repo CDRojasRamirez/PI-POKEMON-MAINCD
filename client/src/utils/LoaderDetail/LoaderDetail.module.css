@@ -36,3 +36,77 @@
     background-size: contain;
     transform: scaleX(-1);
   } */
+
+
+  @media screen and (max-width: 540px){
+    .containLoader {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      background: rgb(127, 0, 40);
+      /* background-image: url('../../img/mundoPoke.jpg'); */
+      
+    }
+    
+    .loader1 {
+  
+      width: 480px;
+      height: 342px;
+      /* margin-top: 100px;
+      margin-right: 800px; */
+      background-image: url('../../gif/pikachuCorriendo.gif');
+      
+  }
+}
+
+@media screen and (max-width: 412px){
+  .containLoader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(127, 0, 40);
+    /* background-image: url('../../img/mundoPoke.jpg'); */
+    
+  }
+  
+  .loader1 {
+
+    width: 400px;
+    height: 290px;
+    /* margin-top: 100px;
+    margin-right: 800px; */
+    background-image: url('../../gif/pikachuCorriendo.gif');
+    background-size: contain;
+    
+}
+}
+@media screen and (max-width: 360px){
+  .containLoader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(127, 0, 40);
+    /* background-image: url('../../img/mundoPoke.jpg'); */
+    
+  }
+  
+  .loader1 {
+
+    width: 330px;
+    height: 236px;
+    /* margin-top: 100px;
+    margin-right: 800px; */
+    background-image: url('../../gif/pikachuCorriendo.gif');
+    background-size: contain;
+    
+}
+}

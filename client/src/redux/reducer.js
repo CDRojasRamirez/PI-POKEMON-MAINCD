@@ -10,6 +10,7 @@ import {
   SEARCH_BAR,
   ORDER_ATTACK,
   ORDER_AZ,
+  ORDER_HP,
 } from "./action-type";
 
 const initialState = {
@@ -63,7 +64,7 @@ export const reducer = (state = initialState, action) => {
       }
 
     case NEXT:
-      if (state.currentPage < 12) {
+      if (state.currentPage < 5) {
         try {
           const nextPage = state.currentPage + 1;
           const paginatedPokemons = paginatePokemons(
@@ -139,6 +140,24 @@ export const reducer = (state = initialState, action) => {
         };
       }
       break;
+
+      case ORDER_HP:
+        if (action.payload === "(+-) HP") {
+          return {
+            ...state,
+            PokemonsFiltereds: state.AllPokemons.sort(
+              (a, b) => b.hp - a.hp
+            ),
+          };
+        } else if (action.payload === "(-+) HP") {
+          return {
+            ...state,
+            PokemonsFiltereds: state.AllPokemons.sort(
+              (a, b) => a.hp - b.hp
+            ),
+          };
+        }
+        break;
 
     case ORDER_TYPE:
       const filteredType = state.AllPokemons.filter((e) => {

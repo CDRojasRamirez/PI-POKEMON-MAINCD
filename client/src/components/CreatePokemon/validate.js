@@ -13,7 +13,7 @@ export const validate = (form) => {
             err.name = "❌ Cannot contain numbers";
           }
           if (!alphanumericRegex.test(form.name)) {
-            err.name = "❌ Must not contain spaces or special characters";
+            err.name = "❌ Cannot contain special characters";
           }
     /******************************************************************************  */
 
@@ -46,14 +46,14 @@ export const validate = (form) => {
           }
     /******************************************************************************  */
         if(form.height === "" || form.height < 1 || form.height > 20 ){
-            err.height = '❌ It must be between 1 and 20 decimeters'
+            err.height = '❌ Must be between 1 and 20 decimeters'
         }
         if (!alphanumericRegex.test(form.height)) {
             err.height= "❌ Cannot contain special characters";
           }
     /******************************************************************************  */
         if(form.weight === "" || form.weight < 1 || form.weight > 1000 ){
-            err.weight = '❌ It must have between 1 and 1000 hectograms'
+            err.weight = '❌ Must be between 1 and 1000 hectograms'
         } 
         if (!alphanumericRegex.test(form.weight)) {
             err.weight = "❌ Cannot contain special characters";
