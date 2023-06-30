@@ -15,6 +15,7 @@
     width: 100vw;
     
 }
+
 .formCreate {
     display: flex;
     flex-direction: column;
@@ -26,7 +27,7 @@
     width: 500px;
     height: 450px;
     border-radius: 10px;
-    margin-top: 40px;
+    margin-top: 65px;
 }
 
 .containCreate h1 {
@@ -104,8 +105,10 @@
     width: 205px;
 }
 
+
 .btnCreate {
 
+    background-color: white;
     color: rgb(67, 67, 67);
     padding: 10px;
     margin-top: 10px;
@@ -149,7 +152,7 @@
   
 } */
 
-.imagePokemons {
+/* .imagePokemons {
     
     position: absolute;
     background-image: url('../../img/pokemons.png');
@@ -159,7 +162,7 @@
     left: 100px;
     bottom: 0;
     z-index: 0;
-}
+} */
 
 .Back {
     position: absolute;
@@ -228,3 +231,1105 @@
         width: 75px;
         border-radius: 5px;
     }
+
+/********************querys**************/
+    
+@media screen and (max-width: 1280px) {
+    /* Estilos para pantallas con un ancho máximo de 1024px */
+    .gifP {
+        position: absolute; 
+        height: 300px;
+        width: 250px;
+        left: 200px;
+        top: 460px;
+        background-image: url('../../gif/pikachuSaludando.gif');
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    /* Estilos para pantallas con un ancho máximo de 1024px */
+    @font-face {
+        font-family: "Pokemon Solid";
+        src: url("../../fonts/pokemon_solid/pokemonsolid.ttf");
+      }
+    
+    .containCreate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../../img/mundoPoke.jpg');
+        background: rgb(127, 0, 40);
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        
+    }
+    
+    .formCreate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* background-image: url('../../img/mundoPoke.jpg');
+        background-size: cover; */
+        /* box-shadow: 10px 0px 15px 5px rgb(0, 0, 0); */
+        width: 500px;
+        height: 450px;
+        border-radius: 10px;
+        margin-top: 100px;
+    }
+    
+    .containCreate h1 {
+    
+        position: absolute;
+        left: 100px;
+        top: 150px;
+        font-family: 'Pokemon solid';
+        color: #f2ff00;
+        -webkit-text-stroke: 1px rgb(255, 0, 0);
+        text-shadow: 5px 5px 15px rgb(0, 0, 0);
+        font-size: 15px;
+        margin: 0;
+        margin-top: 150px;
+        padding: 0;
+        letter-spacing: 5px;
+    }
+    
+    .formCreate h3 {
+    
+        font-family: 'Pokemon solid';
+        margin: 0;
+        padding: 0;
+    }
+    
+    .inputCreate {
+    
+        font-size: 10px;
+        font-family: monospace;
+        background: rgba(0, 0, 0, 0.51);
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 5px;
+        color: rgb(255, 255, 255);
+        font-weight: 800;
+        border: 2px solid rgb(255, 153, 0);
+        z-index: 9;
+        
+    }
+    
+    .inputCreate:active {
+        box-shadow: 2px 2px 15px #ffac07 inset;
+    }
+    .inputCreate::placeholder {
+        color: rgb(255, 255, 255);
+        border: none;
+    }
+    
+    .SelectOption {
+    
+        border: none;
+        padding: 10px;
+        width: 140px;
+        background: #ffc800;
+        font-family: monospace;
+        margin-top: 2px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 800;
+    }
+    
+    .SelectOption:hover {
+    
+        cursor: pointer;
+        opacity: 90%;
+    }
+    
+    .labelOption {
+    
+        color: rgb(164, 164, 164);
+        background: #464646;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-family: monospace;
+        margin-top: 2px;
+        font-weight: 800;
+        width: 140px;
+    }
+    
+    
+    .btnCreate {
+    
+        background-color: white;
+        color: rgb(67, 67, 67);
+        padding: 5px;
+        margin-top: 10px;
+        font-size: 16px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        letter-spacing: 1px;
+        font-weight: 800;
+        height: 50px;
+        width: 120px;
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        background-size: cover;
+        z-index: 10;
+    }
+    
+    .btnCreate:hover {
+        cursor: pointer;
+        background-color: #51ff00;
+        color: rgb(75, 75, 75);
+        border: 3px solid rgb(75, 75, 75);
+        border-radius: 5px;
+    }
+    
+    .gifP {
+        position: absolute; 
+        height: 300px;
+        width: 250px;
+        left: 100px;
+        top: 300px;
+        background-image: url('../../gif/pikachuSaludando.gif');
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    /* Estilos para pantallas con un ancho máximo de 992px */
+    @font-face {
+        font-family: "Pokemon Solid";
+        src: url("../../fonts/pokemon_solid/pokemonsolid.ttf");
+      }
+    
+    .containCreate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-image: url('../../img/mundoPoke.jpg');
+        background: rgb(127, 0, 40);
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        
+    }
+    
+    .formCreate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+        height: 450px;
+        border-radius: 10px;
+
+    }
+    
+    .containCreate h1 {
+    
+        position: absolute;
+        left: 335px;
+        top: 5px;
+        font-family: 'Pokemon solid';
+        color: #f2ff00;
+        -webkit-text-stroke: 1px rgb(255, 0, 0);
+        text-shadow: 5px 5px 15px rgb(0, 0, 0);
+        font-size: 20px;
+        margin: 0;
+        margin-top: 150px;
+        padding: 0;
+        letter-spacing: 5px;
+    }
+    
+    .formCreate h3 {
+    
+        font-family: 'Pokemon solid';
+        margin: 0;
+        padding: 0;
+    }
+    
+    .inputCreate {
+    
+        font-size: 20px;
+        font-family: monospace;
+        background: rgba(0, 0, 0, 0.51);
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 5px;
+        color: rgb(255, 255, 255);
+        font-weight: 800;
+        border: 2px solid rgb(255, 153, 0);
+        z-index: 9;
+        
+    }
+    
+    .inputCreate:active {
+        box-shadow: 2px 2px 15px #ffac07 inset;
+    }
+    .inputCreate::placeholder {
+        color: rgb(255, 255, 255);
+        border: none;
+    }
+    
+    .SelectOption {
+    
+        border: none;
+        padding: 10px;
+        width: 260px;
+        background: #ffc800;
+        font-family: monospace;
+        margin-top: 2px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 800;
+    }
+    
+    .SelectOption:hover {
+    
+        cursor: pointer;
+        opacity: 90%;
+    }
+    
+    .labelOption {
+    
+        color: rgb(164, 164, 164);
+        background: #464646;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-family: monospace;
+        margin-top: 2px;
+        font-weight: 800;
+        width: 260px;
+    }
+    
+    
+    .btnCreate {
+    
+        background-color: white;
+        color: rgb(67, 67, 67);
+        padding: 5px;
+        margin-top: 10px;
+        font-size: 16px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        letter-spacing: 1px;
+        font-weight: 800;
+        height: 50px;
+        width: 120px;
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        background-size: cover;
+        z-index: 10;
+    }
+    
+    .btnCreate:hover {
+        cursor: pointer;
+        background-color: #51ff00;
+        color: rgb(75, 75, 75);
+        border: 3px solid rgb(75, 75, 75);
+        border-radius: 5px;
+    }
+    
+    .gifP {
+        position: absolute; 
+        height: 300px;
+        width: 250px;
+        left: 320px;
+        top: 150px;
+        background-image: url('../../gif/pikachuSaludando.gif');
+    }
+    
+
+  }
+
+  @media screen and (max-width: 820px) {
+    /* Estilos para pantallas con un ancho máximo de 992px */
+    @font-face {
+        font-family: "Pokemon Solid";
+        src: url("../../fonts/pokemon_solid/pokemonsolid.ttf");
+      }
+    
+    .containCreate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-image: url('../../img/mundoPoke.jpg');
+        background: rgb(127, 0, 40);
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        
+    }
+    
+    .formCreate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+        height: 450px;
+        border-radius: 10px;
+
+    }
+    
+    .containCreate h1 {
+    
+        position: absolute;
+        left: 290px;
+        top: 120px;
+        font-family: 'Pokemon solid';
+        color: #f2ff00;
+        -webkit-text-stroke: 1px rgb(255, 0, 0);
+        text-shadow: 5px 5px 15px rgb(0, 0, 0);
+        font-size: 20px;
+        margin: 0;
+        margin-top: 150px;
+        padding: 0;
+        letter-spacing: 5px;
+    }
+    
+    .formCreate h3 {
+    
+        font-family: 'Pokemon solid';
+        margin: 0;
+        padding: 0;
+    }
+    
+    .inputCreate {
+    
+        font-size: 20px;
+        font-family: monospace;
+        background: rgba(0, 0, 0, 0.51);
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 5px;
+        color: rgb(255, 255, 255);
+        font-weight: 800;
+        border: 2px solid rgb(255, 153, 0);
+        z-index: 9;
+        
+    }
+    
+    .inputCreate:active {
+        box-shadow: 2px 2px 15px #ffac07 inset;
+    }
+    .inputCreate::placeholder {
+        color: rgb(255, 255, 255);
+        border: none;
+    }
+    
+    .SelectOption {
+    
+        border: none;
+        padding: 10px;
+        width: 260px;
+        background: #ffc800;
+        font-family: monospace;
+        margin-top: 2px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 800;
+    }
+    
+    .SelectOption:hover {
+    
+        cursor: pointer;
+        opacity: 90%;
+    }
+    
+    .labelOption {
+    
+        color: rgb(164, 164, 164);
+        background: #464646;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-family: monospace;
+        margin-top: 2px;
+        font-weight: 800;
+        width: 260px;
+    }
+    
+    
+    .btnCreate {
+    
+        background-color: white;
+        color: rgb(67, 67, 67);
+        padding: 5px;
+        margin-top: 10px;
+        font-size: 16px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        letter-spacing: 1px;
+        font-weight: 800;
+        height: 50px;
+        width: 120px;
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        background-size: cover;
+        z-index: 10;
+    }
+    
+    .btnCreate:hover {
+        cursor: pointer;
+        background-color: #51ff00;
+        color: rgb(75, 75, 75);
+        border: 3px solid rgb(75, 75, 75);
+        border-radius: 5px;
+    }
+    
+    .gifP {
+        position: absolute; 
+        height: 300px;
+        width: 250px;
+        left: 550px;
+        top: 800px;
+        background-image: url('../../gif/pikachuSaludando.gif');
+    }
+
+    .errorContainer {
+        position: relative;
+        display: inline-block;
+      }
+
+    .errorLabel {
+
+        position: absolute;
+        color: rgb(187, 187, 187);
+        margin-left: 10px;
+        margin-top: 15px;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    /* Estilos para pantallas con un ancho máximo de 992px */
+    @font-face {
+        font-family: "Pokemon Solid";
+        src: url("../../fonts/pokemon_solid/pokemonsolid.ttf");
+      }
+    
+    .containCreate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-image: url('../../img/mundoPoke.jpg');
+        background: rgb(127, 0, 40);
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        
+    }
+    
+    .formCreate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+        height: 450px;
+        border-radius: 10px;
+
+    }
+    
+    .containCreate h1 {
+    
+        position: absolute;
+        left: 265px;
+        top: 40px;
+        font-family: 'Pokemon solid';
+        color: #f2ff00;
+        -webkit-text-stroke: 1px rgb(255, 0, 0);
+        text-shadow: 5px 5px 15px rgb(0, 0, 0);
+        font-size: 20px;
+        margin: 0;
+        margin-top: 150px;
+        padding: 0;
+        letter-spacing: 5px;
+    }
+    
+    .formCreate h3 {
+    
+        font-family: 'Pokemon solid';
+        margin: 0;
+        padding: 0;
+    }
+    
+    .inputCreate {
+    
+        font-size: 20px;
+        font-family: monospace;
+        background: rgba(0, 0, 0, 0.51);
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 5px;
+        color: rgb(255, 255, 255);
+        font-weight: 800;
+        border: 2px solid rgb(255, 153, 0);
+        z-index: 9;
+        
+    }
+    
+    .inputCreate:active {
+        box-shadow: 2px 2px 15px #ffac07 inset;
+    }
+    .inputCreate::placeholder {
+        color: rgb(255, 255, 255);
+        border: none;
+    }
+    
+    .SelectOption {
+    
+        border: none;
+        padding: 10px;
+        width: 260px;
+        background: #ffc800;
+        font-family: monospace;
+        margin-top: 2px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 800;
+    }
+    
+    .SelectOption:hover {
+    
+        cursor: pointer;
+        opacity: 90%;
+    }
+    
+    .labelOption {
+    
+        color: rgb(164, 164, 164);
+        background: #464646;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-family: monospace;
+        margin-top: 2px;
+        font-weight: 800;
+        width: 260px;
+    }
+    
+    
+    .btnCreate {
+    
+        background-color: white;
+        color: rgb(67, 67, 67);
+        padding: 5px;
+        margin-top: 10px;
+        font-size: 16px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        letter-spacing: 1px;
+        font-weight: 800;
+        height: 50px;
+        width: 120px;
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        background-size: cover;
+        z-index: 10;
+    }
+    
+    .btnCreate:hover {
+        cursor: pointer;
+        background-color: #51ff00;
+        color: rgb(75, 75, 75);
+        border: 3px solid rgb(75, 75, 75);
+        border-radius: 5px;
+    }
+    
+    .gifP {
+        position: absolute; 
+        height: 300px;
+        width: 250px;
+        left: 500px;
+        top: 700px;
+        background-image: url('../../gif/pikachuSaludando.gif');
+    }
+
+    .errorContainer {
+        position: relative;
+        display: inline-block;
+      }
+
+    .errorLabel {
+
+        position: absolute;
+        color: rgb(187, 187, 187);
+        margin-left: 10px;
+        margin-top: 15px;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    /* Estilos para pantallas con un ancho máximo de 1024px */
+    .containCreate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-image: url('../../img/mundoPoke.jpg');
+        background: rgb(127, 0, 40);
+        background-size: cover;
+        height: 139vh;
+        width: 139vw;
+        
+    }
+    
+    .formCreate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+        height: 450px;
+        border-radius: 10px;
+
+    }
+    
+    .containCreate h1 {
+    
+        position: absolute;
+        left: 265px;
+        top: 40px;
+        font-family: 'Pokemon solid';
+        color: #f2ff00;
+        -webkit-text-stroke: 1px rgb(255, 0, 0);
+        text-shadow: 5px 5px 15px rgb(0, 0, 0);
+        font-size: 20px;
+        margin: 0;
+        margin-top: 150px;
+        padding: 0;
+        letter-spacing: 5px;
+    }
+    
+    .formCreate h3 {
+    
+        font-family: 'Pokemon solid';
+        margin: 0;
+        padding: 0;
+    }
+    
+    .inputCreate {
+    
+        font-size: 20px;
+        font-family: monospace;
+        background: rgba(0, 0, 0, 0.51);
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 5px;
+        color: rgb(255, 255, 255);
+        font-weight: 800;
+        border: 2px solid rgb(255, 153, 0);
+        z-index: 9;
+        
+    }
+    
+    .inputCreate:active {
+        box-shadow: 2px 2px 15px #ffac07 inset;
+    }
+    .inputCreate::placeholder {
+        color: rgb(255, 255, 255);
+        border: none;
+    }
+    
+    .SelectOption {
+    
+        border: none;
+        padding: 10px;
+        width: 260px;
+        background: #ffc800;
+        font-family: monospace;
+        margin-top: 2px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 800;
+    }
+    
+    .SelectOption:hover {
+    
+        cursor: pointer;
+        opacity: 90%;
+    }
+    
+    .labelOption {
+    
+        color: rgb(164, 164, 164);
+        background: #464646;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-family: monospace;
+        margin-top: 2px;
+        font-weight: 800;
+        width: 260px;
+    }
+    
+    
+    .btnCreate {
+    
+        background-color: white;
+        color: rgb(67, 67, 67);
+        padding: 5px;
+        margin-top: 10px;
+        font-size: 16px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        letter-spacing: 1px;
+        font-weight: 800;
+        height: 50px;
+        width: 120px;
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        background-size: cover;
+        z-index: 10;
+    }
+    
+    .btnCreate:hover {
+        cursor: pointer;
+        background-color: #51ff00;
+        color: rgb(75, 75, 75);
+        border: 3px solid rgb(75, 75, 75);
+        border-radius: 5px;
+    }
+    
+    .gifP {
+        position: absolute; 
+        height: 300px;
+        width: 250px;
+        left: 500px;
+        top: 700px;
+        background-image: url('../../gif/pikachuSaludando.gif');
+    }
+
+    .errorContainer {
+        position: relative;
+        display: inline-block;
+      }
+
+    .errorLabel {
+
+        position: absolute;
+        color: rgb(187, 187, 187);
+        margin-left: 10px;
+        margin-top: 15px;
+        white-space: nowrap;
+        font-size: 11px;
+    }
+  }
+
+  @media screen and (max-width: 412px) {
+    /* Estilos para pantallas con un ancho máximo de 1024px */
+    .containCreate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-image: url('../../img/mundoPoke.jpg');
+        background: rgb(127, 0, 40);
+        background-size: cover;
+        height: 182vh;
+        width: 182vw;
+        
+    }
+    
+    .formCreate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+        height: 450px;
+        border-radius: 10px;
+
+    }
+    
+    .containCreate h1 {
+    
+        position: absolute;
+        left: 290px;
+        top: 300px;
+        font-family: 'Pokemon solid';
+        color: #f2ff00;
+        -webkit-text-stroke: 1px rgb(255, 0, 0);
+        text-shadow: 5px 5px 15px rgb(0, 0, 0);
+        font-size: 30px;
+        margin: 0;
+        margin-top: 150px;
+        padding: 0;
+        letter-spacing: 5px;
+    }
+    
+    .formCreate h3 {
+    
+        font-family: 'Pokemon solid';
+        margin: 0;
+        padding: 0;
+    }
+    
+    .inputCreate {
+    
+        font-size: 20px;
+        font-family: monospace;
+        background: rgba(0, 0, 0, 0.51);
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 5px;
+        color: rgb(255, 255, 255);
+        font-weight: 800;
+        border: 2px solid rgb(255, 153, 0);
+        z-index: 9;
+        
+    }
+    
+    .inputCreate:active {
+        box-shadow: 2px 2px 15px #ffac07 inset;
+    }
+    .inputCreate::placeholder {
+        color: rgb(255, 255, 255);
+        border: none;
+    }
+    
+    .SelectOption {
+    
+        border: none;
+        padding: 10px;
+        width: 260px;
+        background: #ffc800;
+        font-family: monospace;
+        margin-top: 2px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 800;
+    }
+    
+    .SelectOption:hover {
+    
+        cursor: pointer;
+        opacity: 90%;
+    }
+    
+    .labelOption {
+    
+        color: rgb(164, 164, 164);
+        background: #464646;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-family: monospace;
+        margin-top: 2px;
+        font-weight: 800;
+        width: 260px;
+    }
+    
+    
+    .btnCreate {
+    
+        background-color: white;
+        color: rgb(67, 67, 67);
+        padding: 5px;
+        margin-top: 10px;
+        font-size: 16px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        letter-spacing: 1px;
+        font-weight: 800;
+        height: 50px;
+        width: 120px;
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        background-size: cover;
+        z-index: 10;
+    }
+    
+    .btnCreate:hover {
+        cursor: pointer;
+        background-color: #51ff00;
+        color: rgb(75, 75, 75);
+        border: 3px solid rgb(75, 75, 75);
+        border-radius: 5px;
+    }
+    
+    .gifP {
+        position: absolute; 
+        height: 300px;
+        width: 250px;
+        left: 230px;
+        top: 160px;
+        background-image: url('../../gif/pikachuSaludando.gif');
+    }
+
+    .errorContainer {
+        position: relative;
+        display: inline-block;
+      }
+
+    .errorLabel {
+
+        position: absolute;
+        color: rgb(187, 187, 187);
+        margin-left: 10px;
+        margin-top: 15px;
+        white-space: nowrap;
+        font-size: 11px;
+    }
+  }
+
+
+  @media screen and (max-width: 360px) {
+    /* Estilos para pantallas con un ancho máximo de 1024px */
+    .containCreate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-image: url('../../img/mundoPoke.jpg');
+        background: rgb(127, 0, 40);
+        background-size: cover;
+        height: 186vh;
+        width: 186vw;
+        
+    }
+    
+    .formCreate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+        height: 450px;
+        border-radius: 10px;
+
+    }
+    
+    .containCreate h1 {
+    
+        position: absolute;
+        left: 255px;
+        top: 170px;
+        font-family: 'Pokemon solid';
+        color: #f2ff00;
+        -webkit-text-stroke: 1px rgb(255, 0, 0);
+        text-shadow: 5px 5px 15px rgb(0, 0, 0);
+        font-size: 30px;
+        margin: 0;
+        margin-top: 150px;
+        padding: 0;
+        letter-spacing: 5px;
+    }
+    
+    .formCreate h3 {
+    
+        font-family: 'Pokemon solid';
+        margin: 0;
+        padding: 0;
+    }
+    
+    .inputCreate {
+    
+        font-size: 16px;
+        font-family: monospace;
+        background: rgba(0, 0, 0, 0.51);
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 5px;
+        color: rgb(255, 255, 255);
+        font-weight: 800;
+        border: 2px solid rgb(255, 153, 0);
+        z-index: 9;
+        
+    }
+    
+    .inputCreate:active {
+        box-shadow: 2px 2px 15px #ffac07 inset;
+    }
+    .inputCreate::placeholder {
+        color: rgb(255, 255, 255);
+        border: none;
+    }
+    
+    .SelectOption {
+    
+        border: none;
+        padding: 10px;
+        width: 210px;
+        background: #ffc800;
+        font-family: monospace;
+        margin-top: 2px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 800;
+    }
+    
+    .SelectOption:hover {
+    
+        cursor: pointer;
+        opacity: 90%;
+    }
+    
+    .labelOption {
+    
+        color: rgb(164, 164, 164);
+        background: #464646;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-family: monospace;
+        margin-top: 2px;
+        font-weight: 800;
+        width: 210px;
+    }
+    
+    
+    .btnCreate {
+    
+        background-color: white;
+        color: rgb(67, 67, 67);
+        padding: 5px;
+        margin-top: 10px;
+        font-size: 16px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        letter-spacing: 1px;
+        font-weight: 800;
+        height: 50px;
+        width: 120px;
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        background-size: cover;
+        z-index: 10;
+    }
+    
+    .btnCreate:hover {
+        cursor: pointer;
+        background-color: #51ff00;
+        color: rgb(75, 75, 75);
+        border: 3px solid rgb(75, 75, 75);
+        border-radius: 5px;
+    }
+    
+    .gifP {
+        position: absolute; 
+        height: 300px;
+        width: 250px;
+        left: 210px;
+        top: 990px;
+        background-image: url('../../gif/pikachuSaludando.gif');
+    }
+
+    .errorContainer {
+        position: relative;
+        display: inline-block;
+      }
+
+    .errorLabel {
+
+        position: absolute;
+        color: rgb(187, 187, 187);
+        margin-left: 10px;
+        margin-top: 15px;
+        white-space: nowrap;
+        font-size: 10px;
+    }
+  }

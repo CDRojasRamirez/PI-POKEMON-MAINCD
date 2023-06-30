@@ -7,6 +7,7 @@ export const ORDER_AD = "ORDER_AD"
 export const ORDER_AZ = "ORDER_AZ"
 export const ORDER_APIDB = "ORDER_APIDB"
 export const ORDER_ATTACK = "ORDER_ATTACK"
+export const ORDER_HP = "ORDER_HP"
 export const RESET = "RESET"
 
 export const CREATE_POKEMON = "CREATE_POKEMON"

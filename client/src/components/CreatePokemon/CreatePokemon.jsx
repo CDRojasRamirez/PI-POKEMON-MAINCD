@@ -82,7 +82,11 @@ const CreatePokemon = () => {
       }
 
     } else {
-      alert("Llena los campos vacios o corrige los errores del formulario");
+    alert("Llena los campos vacios o corrige los errores del formulario");
+      <div className="alert alert-error">
+       <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      <span>Error! Task failed successfully.</span>
+      </div>
     }
   };
 
@@ -95,7 +99,7 @@ const CreatePokemon = () => {
       <Link className={style.Back} to="/home">
         ⋘ Back
       </Link>
-      <h1>POKEMON CREATE</h1>
+      <h1 className={style.title}>POKEMON CREATE</h1>
       <div className={style.gifP}></div>
       <div className={style.imagePng} style={{opacity: "10%"}}></div>
       <div className={style.imagePokemons} style={{opacity: "10%"}}></div>
@@ -288,10 +292,13 @@ const CreatePokemon = () => {
           ? formData.types.join(", ")
           : ""}
       </label>
+
         <button type="button" onClick={handleCreate} className={style.btnCreate}>
           CREATE
         </button>
+  
       </form>
+      {/*className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg"*/}
     </div>
   );
 };

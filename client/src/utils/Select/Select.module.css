@@ -65,3 +65,299 @@
   background: #ff0040;
   color: aliceblue;
 }
+
+
+/********************querys**************/
+
+@media screen and (max-width: 1440px) {
+  /* Estilos para pantallas con un ancho máximo de 1280px */
+ 
+}
+
+@media screen and (max-width: 1024px) {
+  /* Estilos para pantallas con un ancho máximo de 1024px */
+  
+}
+
+@media screen and (max-width: 992px) {
+  /* Estilos para pantallas con un ancho máximo de 992px */
+  .containSelect{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* position: fixed; */
+    width: 100vw;
+    background: rgb(255, 255, 255);
+    z-index: 1;
+    justify-content: center;
+    margin-top: 82px;
+    
+    background-image: url('../../img/fire2Back.jpg');
+    background-image: url('../../img/backgroundPokemon.jpg');
+    background: rgb(127, 0, 40);
+    
+}
+
+.containSelectOption{
+    display: inline-block;
+    background: none;
+    margin: 8px;
+}
+
+.LabelSelectOption{
+
+    margin: 0; /* elimina el margen por defecto */
+  padding: 10px; /* elimina el padding por defecto */
+  border: none; /* elimina el borde por defecto */
+  color: inherit; /* establece el color igual al del elemento padre */
+  appearance: none;
+  background: none;
+  
+  color: rgba(232, 231, 231, 0.8);
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+
+}
+
+.SelectOption{
+
+    margin: 5px 0 0 0; /* elimina el margen por defecto */
+  padding: 4px; /* elimina el padding por defecto */
+  top: 7px;
+  border: none; /* elimina el borde por defecto */
+  font-size: 12px; /* establece el tamaño de fuente igual al del elemento padre */
+  color: inherit; /* establece el color igual al del elemento padre */
+  appearance: none;
+  background: none;
+  width: 75px;
+
+    color: rgba(255, 255, 255, 0.8);
+    font-family: monospace;
+    font-weight: 1000;
+    background: rgba(255, 196, 0, 0.193);
+    border: 3px solid red;
+    box-shadow: 2px 2px 3px 1px rgb(0, 0, 0);
+    border-radius: 3px;
+}
+
+.SelectOption:hover{
+
+  cursor: pointer;
+  background: #ff0040;
+  color: aliceblue;
+}
+
+
+}
+@media screen and (max-width: 710px) {
+  /* Estilos para pantallas con un ancho máximo de 540px */
+  .containSelect{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: fixed; */
+    width: 100vw;
+    background: rgb(255, 255, 255);
+    z-index: 1;
+    justify-content: center;
+    margin-top: 170px;
+
+    background-image: url('../../img/fire2Back.jpg');
+    background-image: url('../../img/backgroundPokemon.jpg');
+    background: rgb(127, 0, 40);
+}
+
+.containOptionTotal {
+  display: inline-block;
+    background: none;
+    margin: 8px;
+}
+.LabelSelectOption{
+
+    margin: 0; /* elimina el margen por defecto */
+  padding: 8px; /* elimina el padding por defecto */
+  border: none; /* elimina el borde por defecto */
+  color: inherit; /* establece el color igual al del elemento padre */
+  appearance: none;
+  background: none;
+  
+  color: rgba(232, 231, 231, 0.8);
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+
+}
+
+.SelectOption{
+
+    margin: 5px 0 0 0; /* elimina el margen por defecto */
+  padding: 4px; /* elimina el padding por defecto */
+  top: 7px;
+  border: none; /* elimina el borde por defecto */
+  font-size: 15px; /* establece el tamaño de fuente igual al del elemento padre */
+  color: inherit; /* establece el color igual al del elemento padre */
+  appearance: none;
+  background: none;
+  width: 87px;
+
+    color: rgba(255, 255, 255, 0.8);
+    font-family: monospace;
+    font-weight: 1000;
+    background: rgba(255, 196, 0, 0.193);
+    border: 3px solid red;
+    box-shadow: 2px 2px 3px 1px rgb(0, 0, 0);
+    border-radius: 3px;
+}
+
+.SelectOption:hover{
+
+  cursor: pointer;
+  background: #ff0040;
+  color: aliceblue;
+}
+}
+
+@media screen and (max-width: 540px) {
+  /* Estilos para pantallas con un ancho máximo de 540px */
+  .containSelect{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: fixed; */
+    width: 100vw;
+    background: rgb(255, 255, 255);
+    z-index: 1;
+    justify-content: center;
+    margin-top: 170px;
+
+    background-image: url('../../img/fire2Back.jpg');
+    background-image: url('../../img/backgroundPokemon.jpg');
+    background: rgb(127, 0, 40);
+}
+
+.containOptionTotal {
+  display: inline-block;
+    background: none;
+    margin: 8px;
+}
+.LabelSelectOption{
+
+    margin: 0; /* elimina el margen por defecto */
+  padding: 8px; /* elimina el padding por defecto */
+  border: none; /* elimina el borde por defecto */
+  color: inherit; /* establece el color igual al del elemento padre */
+  appearance: none;
+  background: none;
+  
+  color: rgba(232, 231, 231, 0.8);
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+
+}
+
+.SelectOption{
+
+    margin: 5px 0 0 0; /* elimina el margen por defecto */
+  padding: 4px; /* elimina el padding por defecto */
+  top: 7px;
+  border: none; /* elimina el borde por defecto */
+  font-size: 15px; /* establece el tamaño de fuente igual al del elemento padre */
+  color: inherit; /* establece el color igual al del elemento padre */
+  appearance: none;
+  background: none;
+  width: 87px;
+
+    color: rgba(255, 255, 255, 0.8);
+    font-family: monospace;
+    font-weight: 1000;
+    background: rgba(255, 196, 0, 0.193);
+    border: 3px solid red;
+    box-shadow: 2px 2px 3px 1px rgb(0, 0, 0);
+    border-radius: 3px;
+}
+
+.SelectOption:hover{
+
+  cursor: pointer;
+  background: #ff0040;
+  color: aliceblue;
+}
+}
+
+@media screen and (max-width: 412px) {
+  /* Estilos para pantallas con un ancho máximo de 540px */
+  .containSelect{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: fixed; */
+    width: 100vw;
+    background: rgb(255, 255, 255);
+    z-index: 1;
+    margin: 0;
+    margin-top: 170px;
+    background-image: url('../../img/fire2Back.jpg');
+    background-image: url('../../img/backgroundPokemon.jpg');
+    background: rgb(127, 0, 40);
+}
+
+.containOptionTotal {
+  display: inline-block;
+    background: none;
+}
+.LabelSelectOption{
+
+  
+  margin: 0; /* elimina el margen por defecto */
+  padding: 8px; /* elimina el padding por defecto */
+  border: none; /* elimina el borde por defecto */
+  color: inherit; /* establece el color igual al del elemento padre */
+  appearance: none;
+  background: none;
+  margin-bottom: 0;
+  color: rgba(232, 231, 231, 0.8);
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+
+}
+
+.SelectOption{
+
+    margin: 5px 0 0 0; /* elimina el margen por defecto */
+  padding: 4px; /* elimina el padding por defecto */
+  border: none; /* elimina el borde por defecto */
+  font-size: 15px; /* establece el tamaño de fuente igual al del elemento padre */
+  color: inherit; /* establece el color igual al del elemento padre */
+  appearance: none;
+  background: none;
+  width: 4.375rem;
+  margin-bottom: 0;
+
+    color: rgba(255, 255, 255, 0.8);
+    font-family: monospace;
+    font-weight: 1000;
+    background: rgba(255, 196, 0, 0.193);
+    border: 3px solid red;
+    box-shadow: 2px 2px 3px 1px rgb(0, 0, 0);
+    border-radius: 3px;
+}
+
+.SelectOption:hover{
+
+  cursor: pointer;
+  background: #ff0040;
+  color: aliceblue;
+}
+}
+@media screen and (max-width: 280px) {
+  /* Estilos para pantallas con un ancho máximo de 540px */
+  
+}
+

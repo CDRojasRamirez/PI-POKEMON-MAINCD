@@ -1,3 +1,6 @@
+import './styles/tailwind.css';
+import 'daisyui/dist/full.css';
+
 import './App.css';
 import LandingPage from './components/LandingPage';
 import { Switch, Route, useLocation } from 'react-router-dom'
