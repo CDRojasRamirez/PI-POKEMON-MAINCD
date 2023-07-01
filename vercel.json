@@ -13,7 +13,10 @@
       },
       {
         "src": "/(.*)",
-        "dest": "/"
+        "dest": "/client/$1",
+        "headers": {
+          "Cache-Control": "s-maxage=0"
+        }
       }
     ]
   }
