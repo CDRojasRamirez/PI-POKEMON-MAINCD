@@ -14,7 +14,7 @@ const DetailPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3005/pokemon/${id}`);
+        const response = await axios.get(`/pokemon/${id}`);
         setPokemonById(response.data);
         setIsLoading(false);
       } catch (error) {
