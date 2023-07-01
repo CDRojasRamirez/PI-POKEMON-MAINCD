@@ -8,8 +8,6 @@ import { useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-import pikachu from '../../img/pikachu.jpg'
-
 const Nav = () => {
   const location = useLocation();
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);

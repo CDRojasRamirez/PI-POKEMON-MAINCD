@@ -4,7 +4,7 @@ import axios from "axios";
 export const getAllPokemons = () => {
   return async (dispatch) => {
     try {
-      const pokemonsApi = (await axios.get("http://localhost:3005/pokemon")).data;
+      const pokemonsApi = (await axios.get("/pokemon")).data;
 
       dispatch({ type: GET_ALL_POKEMONS, payload: pokemonsApi });
     } catch (error) {
@@ -55,7 +55,7 @@ export const createPokemonR = (datita) => {
 
   return async (dispatch) => {
 
-    const res = (await axios.post('http://localhost:3005/pokemon', datita)).data
+    const res = (await axios.post('/pokemon', datita)).data
     dispatch({ type: CREATE_POKEMON, payload: res })
   }
 }
@@ -63,7 +63,7 @@ export const createPokemonR = (datita) => {
 export const searchBar = (name) => {
 
     return async (dispatch) => {
-      const res = await axios.get(`http://localhost:3005/pokemon/name?name=${name}`);
+      const res = await axios.get(`/pokemon/name?name=${name}`);
       dispatch({ type: SEARCH_BAR, payload: res.data });
     };
 };
